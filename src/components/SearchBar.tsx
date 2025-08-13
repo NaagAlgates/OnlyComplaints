@@ -126,7 +126,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search for a company or type of issue..."
+          placeholder="Search companies..."
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}

@@ -65,7 +65,7 @@ function App() {
 
   const heroStyles: React.CSSProperties = {
     textAlign: 'center',
-    padding: '3rem 0',
+    padding: '4rem 0 3rem 0',
     backgroundColor: '#fff',
     marginBottom: searchResults.length > 0 ? '2rem' : '0',
     borderRadius: '12px',
@@ -77,16 +77,7 @@ function App() {
     fontSize: '2.5rem',
     fontWeight: '700',
     color: '#1a1a1a',
-    marginBottom: '1rem',
-  };
-
-  const subtitleStyles: React.CSSProperties = {
-    fontSize: '1.2rem',
-    color: '#666',
     marginBottom: '2rem',
-    maxWidth: '600px',
-    margin: '0 auto 2rem',
-    lineHeight: '1.5',
   };
 
   const resultsStyles: React.CSSProperties = {
@@ -105,10 +96,6 @@ function App() {
           <>
             <div style={heroStyles}>
               <h1 style={titleStyles}>OnlyComplaints</h1>
-              <p style={subtitleStyles}>
-                Find the official complaint channels for Australia's top companies. 
-                Get help resolving disputes and know your escalation options.
-              </p>
               <SearchBar onSearch={handleSearch} />
             </div>
 
