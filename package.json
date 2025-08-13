@@ -1,0 +1,36 @@
+{
+  "name": "onlycomplaints",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && cp -r dist/* . && rm -rf dist && git add . && git commit -m 'Deploy to GitHub Pages' && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaagAlgates/OnlyComplaints.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaagAlgates/OnlyComplaints/issues"
+  },
+  "homepage": "https://github.com/NaagAlgates/OnlyComplaints#readme",
+  "description": "",
+  "dependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "vite": "^7.1.2"
+  }
+}

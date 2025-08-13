@@ -1,0 +1,301 @@
+import { Company } from '../types';
+import { getAgenciesByIndustry } from './agencies';
+
+export const companies: Company[] = [
+  {
+    id: 'telstra',
+    name: 'Telstra Corporation Limited',
+    abn: '33 051 775 556',
+    industry: 'telecommunications',
+    description: 'Australia\'s largest telecommunications company providing mobile, internet, and phone services',
+    website: 'https://www.telstra.com.au',
+    contact: {
+      phone: '132 200',
+      email: 'customer.service@telstra.com',
+      address: {
+        street: '242 Exhibition Street',
+        city: 'Melbourne',
+        state: 'VIC',
+        postcode: '3000'
+      },
+      hours: '24/7 for urgent issues, 8am-8pm for general enquiries'
+    },
+    complaints: {
+      internalProcess: {
+        steps: [
+          'Contact customer service on 132 200 or via live chat',
+          'If unresolved, request escalation to complaints team',
+          'Formal complaint lodged and reference number provided',
+          'Investigation conducted within 5-10 business days',
+          'Written response provided with resolution or explanation'
+        ],
+        timeframe: '15 business days for resolution',
+        contactDetails: {
+          phone: '132 200',
+          email: 'complaints@telstra.com',
+          onlineForm: 'https://www.telstra.com.au/contact-us/feedback-complaints'
+        }
+      },
+      escalation: {
+        agencies: getAgenciesByIndustry('telecommunications'),
+        timeline: 'Contact TIO if unresolved after 8 weeks, or ACMA for regulatory issues'
+      }
+    },
+    commonIssues: [
+      'Billing disputes',
+      'Service outages',
+      'Poor mobile coverage',
+      'Internet speed issues',
+      'Contract disputes',
+      'Unexpected charges'
+    ],
+    rating: {
+      responseTime: 3,
+      resolution: 3,
+      satisfaction: 3
+    }
+  },
+  {
+    id: 'optus',
+    name: 'Optus',
+    abn: '65 054 365 696',
+    industry: 'telecommunications',
+    description: 'Major telecommunications provider offering mobile, internet, and entertainment services',
+    website: 'https://www.optus.com.au',
+    contact: {
+      phone: '133 937',
+      email: 'customer.care@optus.com.au',
+      address: {
+        street: '1 Lyonpark Road',
+        city: 'Macquarie Park',
+        state: 'NSW',
+        postcode: '2113'
+      },
+      hours: '8am-8pm Monday to Friday, 9am-6pm weekends'
+    },
+    complaints: {
+      internalProcess: {
+        steps: [
+          'Contact customer care on 133 937 or online chat',
+          'Escalate to complaints resolution team if needed',
+          'Complaint registered and investigated',
+          'Resolution attempt within 10 business days',
+          'Final response provided in writing'
+        ],
+        timeframe: '10-15 business days',
+        contactDetails: {
+          phone: '133 937',
+          email: 'complaints@optus.com.au',
+          onlineForm: 'https://www.optus.com.au/support/contact-us/complaints'
+        }
+      },
+      escalation: {
+        agencies: getAgenciesByIndustry('telecommunications'),
+        timeline: 'Escalate to TIO after 8 weeks if unresolved'
+      }
+    },
+    commonIssues: [
+      'Network outages',
+      'Billing errors',
+      'Contract issues',
+      'Data speed problems',
+      'Customer service delays',
+      'Plan changes disputes'
+    ],
+    rating: {
+      responseTime: 3,
+      resolution: 2,
+      satisfaction: 2
+    }
+  },
+  {
+    id: 'cba',
+    name: 'Commonwealth Bank of Australia',
+    abn: '48 123 123 124',
+    industry: 'banking',
+    description: 'Australia\'s largest bank providing retail, business, and institutional banking services',
+    website: 'https://www.commbank.com.au',
+    contact: {
+      phone: '13 2221',
+      email: 'feedback@cba.com.au',
+      address: {
+        street: 'Ground Floor, Tower 1, 201 Sussex Street',
+        city: 'Sydney',
+        state: 'NSW',
+        postcode: '2000'
+      },
+      hours: '24/7 phone banking, branch hours vary'
+    },
+    complaints: {
+      internalProcess: {
+        steps: [
+          'Contact customer service on 13 2221 or visit branch',
+          'Request to speak with manager if unresolved',
+          'Lodge formal complaint with Customer Relations',
+          'Investigation conducted by specialist team',
+          'Written response provided within required timeframes'
+        ],
+        timeframe: '21 days for most complaints, 45 days for complex issues',
+        contactDetails: {
+          phone: '13 2221',
+          email: 'customer.relations@cba.com.au',
+          onlineForm: 'https://www.commbank.com.au/support/complaint.html'
+        }
+      },
+      escalation: {
+        agencies: getAgenciesByIndustry('banking'),
+        timeline: 'Contact AFCA (Australian Financial Complaints Authority) if unresolved after 45 days'
+      }
+    },
+    commonIssues: [
+      'Unauthorized transactions',
+      'ATM/EFTPOS failures',
+      'Loan application delays',
+      'Account fees disputes',
+      'Online banking issues',
+      'Credit card disputes'
+    ],
+    rating: {
+      responseTime: 4,
+      resolution: 3,
+      satisfaction: 3
+    }
+  },
+  {
+    id: 'woolworths',
+    name: 'Woolworths Group Limited',
+    abn: '88 000 014 675',
+    industry: 'retail',
+    description: 'Australia\'s largest supermarket chain and retail group',
+    website: 'https://www.woolworths.com.au',
+    contact: {
+      phone: '1800 000 610',
+      email: 'customercare@woolworths.com.au',
+      address: {
+        street: '1 Woolworths Way',
+        city: 'Bella Vista',
+        state: 'NSW',
+        postcode: '2153'
+      },
+      hours: '8am-8pm Monday to Friday, 8am-5pm weekends'
+    },
+    complaints: {
+      internalProcess: {
+        steps: [
+          'Speak with store manager or team member',
+          'Call customer care on 1800 000 610',
+          'Submit feedback online via website',
+          'Complaint investigated by customer care team',
+          'Resolution provided via phone or email'
+        ],
+        timeframe: '5-10 business days',
+        contactDetails: {
+          phone: '1800 000 610',
+          email: 'customercare@woolworths.com.au',
+          onlineForm: 'https://www.woolworths.com.au/shop/discover/contact-us'
+        }
+      },
+      escalation: {
+        agencies: getAgenciesByIndustry('retail'),
+        timeline: 'Contact ACCC for product safety or misleading conduct issues'
+      }
+    },
+    commonIssues: [
+      'Product quality issues',
+      'Incorrect pricing',
+      'Poor customer service',
+      'Online delivery problems',
+      'Refund disputes',
+      'Food safety concerns'
+    ],
+    rating: {
+      responseTime: 4,
+      resolution: 4,
+      satisfaction: 4
+    }
+  },
+  {
+    id: 'origin-energy',
+    name: 'Origin Energy Limited',
+    abn: '30 000 051 696',
+    industry: 'energy',
+    description: 'Major Australian energy retailer providing electricity and gas services',
+    website: 'https://www.originenergy.com.au',
+    contact: {
+      phone: '13 24 61',
+      email: 'feedback@originenergy.com.au',
+      address: {
+        street: 'Level 32, 8-10 Bridge Street',
+        city: 'Sydney',
+        state: 'NSW',
+        postcode: '2000'
+      },
+      hours: '8am-8pm Monday to Friday, 8am-5pm Saturday'
+    },
+    complaints: {
+      internalProcess: {
+        steps: [
+          'Contact customer service on 13 24 61',
+          'Request escalation to complaints team if needed',
+          'Formal complaint investigation begins',
+          'Resolution attempted within timeframes',
+          'Written response provided'
+        ],
+        timeframe: '20 business days for most complaints',
+        contactDetails: {
+          phone: '13 24 61',
+          email: 'complaints@originenergy.com.au',
+          onlineForm: 'https://www.originenergy.com.au/contact/complaints.html'
+        }
+      },
+      escalation: {
+        agencies: getAgenciesByIndustry('energy'),
+        timeline: 'Contact Energy & Water Ombudsman in your state if unresolved'
+      }
+    },
+    commonIssues: [
+      'High bills',
+      'Billing errors',
+      'Connection delays',
+      'Meter reading issues',
+      'Contract disputes',
+      'Poor customer service'
+    ],
+    rating: {
+      responseTime: 2,
+      resolution: 2,
+      satisfaction: 2
+    }
+  }
+];
+
+export const searchCompanies = (query: string): Company[] => {
+  if (!query.trim()) return [];
+  
+  const lowerQuery = query.toLowerCase();
+  const results = companies.filter(company => 
+    company.name.toLowerCase().includes(lowerQuery) ||
+    company.industry.toLowerCase().includes(lowerQuery) ||
+    company.commonIssues.some(issue => issue.toLowerCase().includes(lowerQuery))
+  );
+  
+  // Sort by relevance (exact name matches first, then partial matches)
+  return results.sort((a, b) => {
+    const aNameMatch = a.name.toLowerCase().includes(lowerQuery);
+    const bNameMatch = b.name.toLowerCase().includes(lowerQuery);
+    
+    if (aNameMatch && !bNameMatch) return -1;
+    if (!aNameMatch && bNameMatch) return 1;
+    return 0;
+  });
+};
+
+export const getCompanyById = (id: string): Company | undefined => {
+  return companies.find(company => company.id === id);
+};
+
+export const getCompaniesByIndustry = (industry: string): Company[] => {
+  return companies.filter(company => 
+    company.industry.toLowerCase() === industry.toLowerCase()
+  );
+};

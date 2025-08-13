@@ -1,0 +1,149 @@
+import React, { useState } from 'react';
+
+import { CompanyCard } from './components/CompanyCard';
+import { CompanyDetail } from './components/CompanyDetail';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { SearchBar } from './components/SearchBar';
+import {
+  getCompanyById,
+  searchCompanies,
+} from './data/companies';
+import { Company } from './types';
+
+function App() {
+  const [searchResults, setSearchResults] = useState<Company[]>([]);
+  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim()) {
+      const results = searchCompanies(query);
+      setSearchResults(results);
+      setSelectedCompany(null);
+    } else {
+      setSearchResults([]);
+      setSelectedCompany(null);
+    }
+  };
+
+  const handleCompanySelect = (companyId: string) => {
+    const company = getCompanyById(companyId);
+    if (company) {
+      setSelectedCompany(company);
+      setSearchResults([]);
+    }
+  };
+
+  const handleBackToSearch = () => {
+    setSelectedCompany(null);
+    if (searchQuery.trim()) {
+      const results = searchCompanies(searchQuery);
+      setSearchResults(results);
+    }
+  };
+
+  const appStyles: React.CSSProperties = {
+    minHeight: '100vh',
+    fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Helvetica, Arial, sans-serif',
+    backgroundColor: '#fafafa',
+    display: 'flex',
+    flexDirection: 'column',
+  };
+
+  const mainStyles: React.CSSProperties = {
+    flex: 1,
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 1rem',
+    width: '100%',
+  };
+
+  const heroStyles: React.CSSProperties = {
+    textAlign: 'center',
+    padding: '3rem 0',
+    backgroundColor: '#fff',
+    marginBottom: '2rem',
+    borderRadius: '12px',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+  };
+
+  const titleStyles: React.CSSProperties = {
+    fontSize: '2.5rem',
+    fontWeight: '700',
+    color: '#1a1a1a',
+    marginBottom: '1rem',
+  };
+
+  const subtitleStyles: React.CSSProperties = {
+    fontSize: '1.2rem',
+    color: '#666',
+    marginBottom: '2rem',
+    maxWidth: '600px',
+    margin: '0 auto 2rem',
+    lineHeight: '1.5',
+  };
+
+  const resultsStyles: React.CSSProperties = {
+    display: 'grid',
+    gap: '1rem',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    marginTop: '2rem',
+  };
+
+  return (
+    <div style={appStyles}>
+      <Header />
+      
+      <main style={mainStyles}>
+        {!selectedCompany ? (
+          <>
+            <div style={heroStyles}>
+              <h1 style={titleStyles}>OnlyComplaints</h1>
+              <p style={subtitleStyles}>
+                Find the official complaint channels for Australia's top companies. 
+                Get help resolving disputes and know your escalation options.
+              </p>
+              <SearchBar onSearch={handleSearch} />
+            </div>
+
+            {searchResults.length > 0 && (
+              <div style={resultsStyles}>
+                {searchResults.map(company => (
+                  <CompanyCard
+                    key={company.id}
+                    company={company}
+                    onSelect={handleCompanySelect}
+                  />
+                ))}
+              </div>
+            )}
+
+            {searchQuery && searchResults.length === 0 && (
+              <div style={{ 
+                textAlign: 'center', 
+                padding: '2rem', 
+                color: '#666',
+                backgroundColor: '#fff',
+                borderRadius: '8px',
+                marginTop: '2rem'
+              }}>
+                <p>No companies found for "{searchQuery}". Try a different search term or company name.</p>
+              </div>
+            )}
+          </>
+        ) : (
+          <CompanyDetail
+            company={selectedCompany}
+            onBack={handleBackToSearch}
+          />
+        )}
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
