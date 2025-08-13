@@ -9,7 +9,7 @@
       "website": "https://www.telstra.com.au",
       "contact": {
         "phone": "132 200",
-        "email": "NA",
+        "email": "customer.service@telstra.com",
         "address": {
           "street": "242 Exhibition Street",
           "city": "Melbourne",
@@ -30,12 +30,15 @@
           "timeframe": "15 business days for resolution",
           "contactDetails": {
             "phone": "132 200",
-            "email": "NA",
+            "email": "complaints@telstra.com",
             "onlineForm": "https://www.telstra.com.au/contact-us/feedback-complaints"
           }
         },
         "escalation": {
-          "agencyIds": ["tio", "acma"],
+          "agencyIds": [
+            "tio",
+            "acma"
+          ],
           "timeline": "Contact TIO if unresolved after 8 weeks, or ACMA for regulatory issues"
         }
       },
@@ -57,7 +60,7 @@
       "website": "https://www.optus.com.au",
       "contact": {
         "phone": "133 937",
-        "email": "NA",
+        "email": "customer.care@optus.com.au",
         "address": {
           "street": "1 Lyonpark Road",
           "city": "Macquarie Park",
@@ -78,12 +81,15 @@
           "timeframe": "10-15 business days",
           "contactDetails": {
             "phone": "133 937",
-            "email": "NA",
+            "email": "complaints@optus.com.au",
             "onlineForm": "https://www.optus.com.au/support/contact-us/complaints"
           }
         },
         "escalation": {
-          "agencyIds": ["tio", "acma"],
+          "agencyIds": [
+            "tio",
+            "acma"
+          ],
           "timeline": "Escalate to TIO after 8 weeks if unresolved"
         }
       },
@@ -105,7 +111,7 @@
       "website": "https://www.commbank.com.au",
       "contact": {
         "phone": "13 2221",
-        "email": "NA",
+        "email": "feedback@cba.com.au",
         "address": {
           "street": "Ground Floor, Tower 1, 201 Sussex Street",
           "city": "Sydney",
@@ -126,12 +132,14 @@
           "timeframe": "21 days for most complaints, 45 days for complex issues",
           "contactDetails": {
             "phone": "13 2221",
-            "email": "NA",
+            "email": "customer.relations@cba.com.au",
             "onlineForm": "https://www.commbank.com.au/support/complaint.html"
           }
         },
         "escalation": {
-          "agencyIds": ["afca"],
+          "agencyIds": [
+            "afca"
+          ],
           "timeline": "Contact AFCA (Australian Financial Complaints Authority) if unresolved after 45 days"
         }
       },
@@ -153,7 +161,7 @@
       "website": "https://www.woolworths.com.au",
       "contact": {
         "phone": "1800 000 610",
-        "email": "NA",
+        "email": "customercare@woolworths.com.au",
         "address": {
           "street": "1 Woolworths Way",
           "city": "Bella Vista",
@@ -174,12 +182,14 @@
           "timeframe": "5-10 business days",
           "contactDetails": {
             "phone": "1800 000 610",
-            "email": "NA",
+            "email": "customercare@woolworths.com.au",
             "onlineForm": "https://www.woolworths.com.au/shop/discover/contact-us"
           }
         },
         "escalation": {
-          "agencyIds": ["accc"],
+          "agencyIds": [
+            "accc"
+          ],
           "timeline": "Contact ACCC for product safety or misleading conduct issues"
         }
       },
@@ -227,7 +237,10 @@
           }
         },
         "escalation": {
-          "agencyIds": ["ewon-nsw", "esc-vic"],
+          "agencyIds": [
+            "ewon-nsw",
+            "esc-vic"
+          ],
           "timeline": "Contact Energy & Water Ombudsman in your state if unresolved"
         }
       },
@@ -237,6 +250,344 @@
         "Connection delays",
         "Meter reading issues",
         "Contract disputes",
+        "Poor customer service"
+      ]
+    },
+    {
+      "id": "westpac",
+      "name": "Westpac Banking Corporation",
+      "abn": "33 007 457 141",
+      "industry": "banking",
+      "description": "One of Australia's major banks providing retail, business and institutional banking services.",
+      "website": "https://www.westpac.com.au",
+      "contact": {
+        "phone": "132 032",
+        "email": "NA",
+        "address": {
+          "street": "275 Kent Street",
+          "city": "Sydney",
+          "state": "NSW",
+          "postcode": "2000"
+        },
+        "hours": "8am-8pm Monday to Sunday"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Contact customer service via phone, branch or the online feedback form",
+            "If unresolved, request escalation to the Customer Solutions team",
+            "Complaint is registered and investigated; Westpac aims to resolve most complaints within 5 business days",
+            "Written response provided outlining resolution or explanation"
+          ],
+          "timeframe": "5 business days for most complaints; up to 15 business days for complex matters",
+          "contactDetails": {
+            "phone": "132 032",
+            "email": "NA",
+            "onlineForm": "https://www.westpac.com.au/contact-us/feedback-complaints/"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "afca"
+          ],
+          "timeline": "Contact the Australian Financial Complaints Authority (AFCA) if not resolved or dissatisfied"
+        }
+      },
+      "commonIssues": [
+        "Account service issues",
+        "Fees and charges disputes",
+        "Loan and mortgage delays",
+        "Incorrect transactions",
+        "Customer service complaints"
+      ]
+    },
+    {
+      "id": "nab",
+      "name": "National Australia Bank Limited",
+      "abn": "12 004 044 937",
+      "industry": "banking",
+      "description": "Major Australian bank offering retail, business and institutional banking services.",
+      "website": "https://www.nab.com.au",
+      "contact": {
+        "phone": "13 22 65",
+        "email": "NA",
+        "address": {
+          "street": "700 Bourke Street",
+          "city": "Docklands",
+          "state": "VIC",
+          "postcode": "3008"
+        },
+        "hours": "8am-7pm Monday to Friday, 9am-6pm weekends AEST/AEDT"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Contact customer service on 13 22 65 or visit a branch",
+            "If unresolved, request to lodge a formal complaint with NAB Resolve team",
+            "A case manager investigates and aims to resolve within 5 working days",
+            "Updates provided if more time is needed and final response given"
+          ],
+          "timeframe": "5 business days for most complaints; up to 30 days for complex issues",
+          "contactDetails": {
+            "phone": "13 22 65",
+            "email": "NA",
+            "mail": "NAB Resolve, Reply Paid 2870, Melbourne VIC 8060",
+            "onlineForm": "https://www.nab.com.au/common/forms/complaints"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "afca"
+          ],
+          "timeline": "Contact AFCA if complaint is not resolved or if dissatisfied with the outcome"
+        }
+      },
+      "commonIssues": [
+        "Account and fee disputes",
+        "Mortgage and loan processing delays",
+        "Credit card problems",
+        "Online banking errors",
+        "Poor customer service"
+      ]
+    },
+    {
+      "id": "qantas",
+      "name": "Qantas Airways Limited",
+      "abn": "16 009 661 901",
+      "industry": "airlines",
+      "description": "Australia's flag carrier airline providing domestic and international flights.",
+      "website": "https://www.qantas.com",
+      "contact": {
+        "phone": "1300 659 161",
+        "email": "NA",
+        "address": {
+          "street": "10 Bourke Road",
+          "city": "Mascot",
+          "state": "NSW",
+          "postcode": "2020"
+        },
+        "hours": "9am-5pm AEST, 7 days"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Contact Qantas Customer Care via phone or lodge a complaint through the online form",
+            "Provide booking details and describe the issue",
+            "Qantas investigates and aims to respond within 15 business days",
+            "If unsatisfied, request escalation to a supervisor"
+          ],
+          "timeframe": "15 business days",
+          "contactDetails": {
+            "phone": "1300 659 161",
+            "email": "NA",
+            "onlineForm": "https://www.qantas.com/au/en/support/contact-us/complaints.html"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "airline-advocate"
+          ],
+          "timeline": "Contact the Airline Customer Advocate if unresolved"
+        }
+      },
+      "commonIssues": [
+        "Flight delays and cancellations",
+        "Refund and credit requests",
+        "Baggage problems",
+        "Seat allocation disputes",
+        "Customer service complaints"
+      ]
+    },
+    {
+      "id": "jetstar",
+      "name": "Jetstar Airways Pty Ltd",
+      "abn": "33 069 720 243",
+      "industry": "airlines",
+      "description": "Low\u2011cost airline owned by Qantas Group providing domestic and international flights.",
+      "website": "https://www.jetstar.com",
+      "contact": {
+        "phone": "13 15 38",
+        "email": "NA",
+        "address": {
+          "street": "PO Box 4713",
+          "city": "Melbourne",
+          "state": "VIC",
+          "postcode": "3001"
+        },
+        "hours": "6am-10pm AEST, 7 days"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Call Jetstar on 13 15 38 or lodge a complaint via the online form",
+            "Provide booking reference and details of the issue",
+            "Jetstar registers the complaint and investigates; they aim to respond within 15 business days",
+            "If unsatisfied, request to speak with a supervisor or pursue further"
+          ],
+          "timeframe": "15 business days",
+          "contactDetails": {
+            "phone": "13 15 38",
+            "email": "NA",
+            "onlineForm": "https://forms.jetstar.com/customer-care/complaint"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "airline-advocate"
+          ],
+          "timeline": "Contact the Airline Customer Advocate if unresolved"
+        }
+      },
+      "commonIssues": [
+        "Flight cancellations and delays",
+        "Refund requests",
+        "Booking or check\u2011in problems",
+        "Baggage claims",
+        "Customer service concerns"
+      ]
+    },
+    {
+      "id": "virgin-australia",
+      "name": "Virgin Australia Airlines Pty Ltd",
+      "abn": "36 090 670 965",
+      "industry": "airlines",
+      "description": "Major Australian airline providing domestic and short\u2011haul international flights.",
+      "website": "https://www.virginaustralia.com",
+      "contact": {
+        "phone": "1300 170 911",
+        "email": "NA",
+        "address": {
+          "street": "PO Box 1034",
+          "city": "Spring Hill",
+          "state": "QLD",
+          "postcode": "4004"
+        },
+        "hours": "5am-11pm AEST, 7 days"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Call 1300 170 911 or submit a complaint via the Virgin Australia webform",
+            "Provide flight details and describe the issue; Virgin logs the complaint",
+            "Investigation undertaken; Virgin aims to respond within 10 business days",
+            "If unsatisfied, request escalation to a supervisor"
+          ],
+          "timeframe": "10 business days",
+          "contactDetails": {
+            "phone": "1300 170 911",
+            "email": "NA",
+            "onlineForm": "https://www.virginaustralia.com/au/en/help/contact-us/feedback/"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "airline-advocate"
+          ],
+          "timeline": "Contact the Airline Customer Advocate if unresolved after internal process"
+        }
+      },
+      "commonIssues": [
+        "Flight delays and cancellations",
+        "Refund and credit concerns",
+        "Luggage issues",
+        "Seat or booking errors",
+        "General service complaints"
+      ]
+    },
+    {
+      "id": "agl-energy",
+      "name": "AGL Energy Limited",
+      "abn": "74 115 061 375",
+      "industry": "energy",
+      "description": "Australian energy retailer supplying electricity and gas to residential and business customers.",
+      "website": "https://www.agl.com.au",
+      "contact": {
+        "phone": "131 245",
+        "email": "NA",
+        "address": {
+          "street": "200 George Street",
+          "city": "Sydney",
+          "state": "NSW",
+          "postcode": "2000"
+        },
+        "hours": "8am-6pm Monday to Friday"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Contact AGL on 131 245 (or 1800 775 329) or use the online complaint form",
+            "Provide account information and details of the issue; AGL registers the complaint",
+            "AGL investigates and aims to resolve within 5\u201310 business days",
+            "A written response is provided with resolution or explanation"
+          ],
+          "timeframe": "5\u201310 business days",
+          "contactDetails": {
+            "phone": "131 245",
+            "email": "NA",
+            "onlineForm": "https://www.agl.com.au/help-support/complaints"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "ewon-nsw",
+            "esc-vic"
+          ],
+          "timeline": "Contact the Energy & Water Ombudsman in your state if unresolved"
+        }
+      },
+      "commonIssues": [
+        "High energy bills",
+        "Billing errors",
+        "Connection or supply delays",
+        "Meter reading issues",
+        "Poor customer service"
+      ]
+    },
+    {
+      "id": "coles",
+      "name": "Coles Group Limited",
+      "abn": "11 004 089 936",
+      "industry": "retail",
+      "description": "Major Australian supermarket chain and retail group.",
+      "website": "https://www.coles.com.au",
+      "contact": {
+        "phone": "1800 061 562",
+        "email": "NA",
+        "address": {
+          "street": "PO Box 480",
+          "city": "Glen Iris",
+          "state": "VIC",
+          "postcode": "3146"
+        },
+        "hours": "8:30am-6pm Monday to Friday, 8am-4:30pm Saturday"
+      },
+      "complaints": {
+        "internalProcess": {
+          "steps": [
+            "Speak with the store manager or call customer care on 1800 061 562",
+            "For online shopping issues, call 1800 455 400",
+            "Submit feedback via the Coles website if needed",
+            "Customer care team investigates and provides a resolution within 5\u201310 business days"
+          ],
+          "timeframe": "5\u201310 business days",
+          "contactDetails": {
+            "phone": "1800 061 562",
+            "email": "NA",
+            "onlineForm": "https://www.coles.com.au/customer-care"
+          }
+        },
+        "escalation": {
+          "agencyIds": [
+            "accc"
+          ],
+          "timeline": "Contact the Australian Competition and Consumer Commission (ACCC) for consumer rights or product safety issues"
+        }
+      },
+      "commonIssues": [
+        "Product quality problems",
+        "Incorrect pricing",
+        "Delivery delays",
+        "Refund disputes",
         "Poor customer service"
       ]
     }

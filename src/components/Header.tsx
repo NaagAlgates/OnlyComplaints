@@ -1,6 +1,14 @@
 import React from 'react';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onHomeClick?: () => void;
+  showPrivacyLink?: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({ 
+  onHomeClick, 
+  showPrivacyLink = false 
+}) => {
   const headerStyles: React.CSSProperties = {
     backgroundColor: '#fff',
     borderBottom: '1px solid #e1e5e9',
@@ -55,10 +63,43 @@ export const Header: React.FC = () => {
     <header style={headerStyles}>
       <div style={containerStyles}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span style={logoStyles}>OnlyComplaints</span>
+          <a
+            href="/"
+            style={{
+              ...logoStyles,
+              textDecoration: 'none',
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.hash = '';
+              onHomeClick && onHomeClick();
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = '#f97316';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.color = '#1e3a8a';
+            }}
+          >
+            OnlyComplaints
+          </a>
           <span style={betaTagStyles}>BETA</span>
         </div>
         <nav style={navStyles}>
+          {showPrivacyLink && (
+            <a
+              href="#privacy"
+              style={linkStyles}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = '#f97316';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = '#666';
+              }}
+            >
+              Privacy Policy
+            </a>
+          )}
           <a
             href="#about"
             style={linkStyles}

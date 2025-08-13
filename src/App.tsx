@@ -7,6 +7,7 @@ import { CompanyCard } from './components/CompanyCard';
 import { CompanyDetail } from './components/CompanyDetail';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { SearchBar } from './components/SearchBar';
 import {
   analyticsConfig,
@@ -29,6 +30,45 @@ function App() {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+
+  // Handle browser navigation (back/forward buttons)
+  useEffect(() => {
+    const handlePopState = () => {
+      const hash = window.location.hash;
+      console.log('Navigation detected, hash:', hash); // Debug log
+      
+      if (hash === '#privacy') {
+        setShowPrivacyPolicy(true);
+        setSelectedCompany(null);
+        setSearchResults([]);
+      } else if (hash.startsWith('#company/')) {
+        const companyId = hash.replace('#company/', '');
+        const company = getCompanyById(companyId);
+        if (company) {
+          setSelectedCompany(company);
+          setShowPrivacyPolicy(false);
+        }
+      } else {
+        // No hash or unknown hash - go to home
+        setShowPrivacyPolicy(false);
+        setSelectedCompany(null);
+        // Don't clear search results on back to home
+      }
+    };
+
+    // Check initial URL on load
+    handlePopState();
+
+    // Listen for browser navigation and hash changes
+    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handlePopState);
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', handlePopState);
+    };
+  }, []);
 
   // Initialize Google Analytics
   useEffect(() => {
@@ -71,6 +111,10 @@ function App() {
     const company = getCompanyById(companyId);
     if (company) {
       setSelectedCompany(company);
+      setShowPrivacyPolicy(false);
+
+      // Update URL
+      window.history.pushState(null, '', `#company/${companyId}`);
 
       // Track company view
       trackCompanyView({
@@ -89,10 +133,22 @@ function App() {
 
   const handleBackToSearch = () => {
     setSelectedCompany(null);
+    setShowPrivacyPolicy(false);
+    
+    // Update URL
+    window.history.pushState(null, '', window.location.pathname);
+    
     if (searchQuery.trim()) {
       const results = searchCompanies(searchQuery);
       setSearchResults(results);
     }
+  };
+
+  const handleBackFromPrivacyPolicy = () => {
+    setShowPrivacyPolicy(false);
+    
+    // Update URL
+    window.history.pushState(null, '', window.location.pathname);
   };
 
   const appStyles: React.CSSProperties = {
@@ -112,7 +168,7 @@ function App() {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    paddingTop: searchResults.length > 0 || selectedCompany ? '2rem' : '20vh',
+    paddingTop: searchResults.length > 0 || selectedCompany || showPrivacyPolicy ? '2rem' : '20vh',
     transition: 'padding-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   };
 
@@ -127,10 +183,15 @@ function App() {
 
   return (
     <div style={appStyles}>
-      <Header />
+      <Header 
+        onHomeClick={handleBackFromPrivacyPolicy}
+        showPrivacyLink={!showPrivacyPolicy}
+      />
       
       <main style={mainStyles}>
-        {!selectedCompany ? (
+        {showPrivacyPolicy ? (
+          <PrivacyPolicy />
+        ) : !selectedCompany ? (
           <>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
               <SearchBar 
