@@ -87,24 +87,16 @@ We welcome contributions! This is an open-source project aimed at helping Austra
 4. **Bug Fixes**: Report and fix issues
 5. **Documentation**: Improve guides and documentation
 
-### Adding Company Data
+### Contributing Data (New JSON Structure!)
 
-Company data is stored in `src/data/companies.ts`. Each company should include:
+We've restructured our data to use JSON files for easier community contributions:
 
-- Basic information (name, ABN, industry, description)
-- Contact details (phone, email, address, hours)
-- Internal complaint process
-- Escalation information
-- Common issues
+- **Companies**: `src/data/companies.json`
+- **Government Agencies**: `src/data/agencies.json`
 
-### Adding Government Agencies
+📖 **See [DATA_CONTRIBUTION.md](DATA_CONTRIBUTION.md) for detailed guidelines on adding companies and agencies.**
 
-Agency data is in `src/data/agencies.ts`. Include:
-
-- Agency details (name, acronym, description)
-- Contact information
-- Jurisdiction and scope
-- Complaint process and requirements
+This new structure makes it much easier to contribute via GitHub Pull Requests - just edit the JSON files!
 
 ### Code Style
 

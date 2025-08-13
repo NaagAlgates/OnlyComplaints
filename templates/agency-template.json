@@ -1,0 +1,33 @@
+{
+  "id": "agency-name-lowercase",
+  "name": "Full Government Agency Name",
+  "acronym": "ACRONYM",
+  "description": "Description of what the agency does and their role in consumer protection",
+  "website": "https://www.agency.gov.au",
+  "contact": {
+    "phone": "1800 XXX XXX",
+    "email": "contact@agency.gov.au",
+    "onlineForm": "https://www.agency.gov.au/complaints"
+  },
+  "jurisdiction": "federal",
+  "industries": ["industry1", "industry2"],
+  "complaintTypes": [
+    "Type of complaints they handle",
+    "Another complaint type",
+    "Regulatory issues"
+  ],
+  "process": {
+    "steps": [
+      "Step 1: How consumers should start the process",
+      "Step 2: What happens during investigation",
+      "Step 3: How resolution is provided",
+      "Step 4: Any follow-up processes"
+    ],
+    "timeframe": "Expected timeframe for resolution",
+    "requirements": [
+      "Requirement 1: What consumers need to provide",
+      "Requirement 2: Prerequisites for lodging complaint",
+      "Requirement 3: Any limitations or conditions"
+    ]
+  }
+}

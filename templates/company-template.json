@@ -1,0 +1,46 @@
+{
+  "id": "company-name-lowercase",
+  "name": "Official Company Name Pty Ltd",
+  "abn": "12 345 678 901",
+  "industry": "telecommunications",
+  "description": "Brief description of what the company does",
+  "website": "https://www.company.com.au",
+  "contact": {
+    "phone": "1800 XXX XXX",
+    "email": "customer.service@company.com.au",
+    "address": {
+      "street": "123 Business Street",
+      "city": "Melbourne",
+      "state": "VIC",
+      "postcode": "3000"
+    },
+    "hours": "8am-6pm Monday to Friday"
+  },
+  "complaints": {
+    "internalProcess": {
+      "steps": [
+        "Contact customer service on [phone] or via [method]",
+        "If unresolved, request escalation to complaints team",
+        "Formal complaint lodged and reference number provided",
+        "Investigation conducted within X business days",
+        "Written response provided with resolution or explanation"
+      ],
+      "timeframe": "X business days for resolution",
+      "contactDetails": {
+        "phone": "1800 XXX XXX",
+        "email": "complaints@company.com.au",
+        "onlineForm": "https://www.company.com.au/complaints"
+      }
+    },
+    "escalation": {
+      "agencyIds": ["relevant-agency-id"],
+      "timeline": "Contact [agency] if unresolved after X weeks"
+    }
+  },
+  "commonIssues": [
+    "Common complaint type 1",
+    "Common complaint type 2",
+    "Common complaint type 3",
+    "Common complaint type 4"
+  ]
+}

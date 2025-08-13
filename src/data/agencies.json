@@ -1,0 +1,213 @@
+{
+  "agencies": [
+    {
+      "id": "tio",
+      "name": "Telecommunications Industry Ombudsman",
+      "acronym": "TIO",
+      "description": "Independent dispute resolution service for small business and residential consumers in Australia who have a complaint about their telephone or internet service.",
+      "website": "https://www.tio.com.au",
+      "contact": {
+        "phone": "1800 062 058",
+        "email": "enquiries@tio.com.au",
+        "onlineForm": "https://www.tio.com.au/making-a-complaint"
+      },
+      "jurisdiction": "federal",
+      "industries": ["telecommunications"],
+      "complaintTypes": [
+        "Billing disputes",
+        "Service faults",
+        "Contract disputes",
+        "Connection issues",
+        "Poor customer service"
+      ],
+      "process": {
+        "steps": [
+          "Contact your service provider first",
+          "Wait at least 8 weeks for resolution or receive a deadlock letter",
+          "Submit complaint to TIO online, by phone, or post",
+          "TIO will investigate and work toward resolution",
+          "Binding decision may be issued if needed"
+        ],
+        "timeframe": "Most complaints resolved within 10 business days",
+        "requirements": [
+          "Must be a small business or residential consumer",
+          "Must have attempted resolution with provider first",
+          "Complaint must be about a TIO member service"
+        ]
+      }
+    },
+    {
+      "id": "acma",
+      "name": "Australian Communications and Media Authority",
+      "acronym": "ACMA",
+      "description": "Regulates broadcasting, internet, radiocommunications and telecommunications in Australia.",
+      "website": "https://www.acma.gov.au",
+      "contact": {
+        "phone": "1800 803 772",
+        "email": "info@acma.gov.au",
+        "onlineForm": "https://www.acma.gov.au/report-a-problem"
+      },
+      "jurisdiction": "federal",
+      "industries": ["telecommunications", "media"],
+      "complaintTypes": [
+        "Regulatory breaches",
+        "Accessibility issues",
+        "Privacy concerns",
+        "Spam and scams",
+        "Broadcasting content"
+      ],
+      "process": {
+        "steps": [
+          "Report the issue online or by phone",
+          "ACMA will assess if it falls under their jurisdiction",
+          "Investigation may be conducted if warranted",
+          "Enforcement action taken if breaches found"
+        ],
+        "timeframe": "Assessment within 10 business days",
+        "requirements": [
+          "Issue must relate to ACMA's regulatory responsibilities",
+          "Evidence of the problem should be provided"
+        ]
+      }
+    },
+    {
+      "id": "afca",
+      "name": "Australian Financial Complaints Authority",
+      "acronym": "AFCA",
+      "description": "Independent dispute resolution service for consumers and small businesses with complaints about financial services.",
+      "website": "https://www.afca.org.au",
+      "contact": {
+        "phone": "1800 931 678",
+        "email": "info@afca.org.au",
+        "onlineForm": "https://www.afca.org.au/make-a-complaint"
+      },
+      "jurisdiction": "federal",
+      "industries": ["banking", "insurance", "superannuation", "credit"],
+      "complaintTypes": [
+        "Banking disputes",
+        "Insurance claims",
+        "Credit issues",
+        "Investment disputes",
+        "Superannuation problems"
+      ],
+      "process": {
+        "steps": [
+          "Contact your financial service provider first",
+          "Wait for their internal dispute resolution process",
+          "Submit complaint to AFCA if unresolved after 45 days",
+          "AFCA will review and investigate",
+          "Binding determination may be issued"
+        ],
+        "timeframe": "Most complaints resolved within 30-120 days",
+        "requirements": [
+          "Must be a consumer or small business",
+          "Complaint must be about an AFCA member",
+          "Internal dispute resolution must be attempted first"
+        ]
+      }
+    },
+    {
+      "id": "accc",
+      "name": "Australian Competition and Consumer Commission",
+      "acronym": "ACCC",
+      "description": "Promotes competition and fair trading and regulates national infrastructure for the benefit of all Australians.",
+      "website": "https://www.accc.gov.au",
+      "contact": {
+        "phone": "1300 302 502",
+        "email": "infocentre@accc.gov.au",
+        "onlineForm": "https://www.accc.gov.au/contact-us/contact-the-accc"
+      },
+      "jurisdiction": "federal",
+      "industries": ["retail", "consumer goods", "competition"],
+      "complaintTypes": [
+        "Misleading advertising",
+        "Product safety issues",
+        "Anti-competitive behavior",
+        "Consumer guarantees",
+        "Unfair trading"
+      ],
+      "process": {
+        "steps": [
+          "Report the issue online via Scamwatch or contact form",
+          "Provide detailed information and evidence",
+          "ACCC will assess the report",
+          "Investigation may be conducted for systemic issues",
+          "Enforcement action taken if breaches found"
+        ],
+        "timeframe": "Assessment within 20 business days",
+        "requirements": [
+          "Issue must involve potential breaches of consumer law",
+          "Evidence and documentation should be provided"
+        ]
+      }
+    },
+    {
+      "id": "ewon-nsw",
+      "name": "Energy & Water Ombudsman NSW",
+      "acronym": "EWON",
+      "description": "Independent dispute resolution service for electricity, gas and water complaints in NSW.",
+      "website": "https://www.ewon.com.au",
+      "contact": {
+        "phone": "1800 246 545",
+        "email": "omb@ewon.com.au",
+        "onlineForm": "https://www.ewon.com.au/complaints/lodge-a-complaint"
+      },
+      "jurisdiction": "state",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "Billing disputes",
+        "Supply issues",
+        "Connection problems",
+        "Contract disputes",
+        "Customer service issues"
+      ],
+      "process": {
+        "steps": [
+          "Contact your energy/water provider first",
+          "Wait for their complaints process (up to 20 business days)",
+          "Contact EWON if unresolved",
+          "EWON will investigate and mediate",
+          "Binding decision may be issued"
+        ],
+        "timeframe": "Most complaints resolved within 20 business days",
+        "requirements": [
+          "Must be a NSW residential or small business customer",
+          "Must have attempted resolution with provider first"
+        ]
+      }
+    },
+    {
+      "id": "esc-vic",
+      "name": "Essential Services Commission Victoria",
+      "acronym": "ESC",
+      "description": "Independent regulator of essential services in Victoria including energy, water, and transport.",
+      "website": "https://www.esc.vic.gov.au",
+      "contact": {
+        "phone": "1300 664 969",
+        "email": "enquiries@esc.vic.gov.au",
+        "onlineForm": "https://www.esc.vic.gov.au/about-us/contact-us"
+      },
+      "jurisdiction": "state",
+      "industries": ["energy", "water", "transport"],
+      "complaintTypes": [
+        "Energy pricing",
+        "Service standards",
+        "Regulatory compliance",
+        "Access arrangements"
+      ],
+      "process": {
+        "steps": [
+          "Submit enquiry or complaint online",
+          "ESC will assess if it's within their jurisdiction",
+          "Investigation conducted if regulatory issue identified",
+          "Enforcement action taken if needed"
+        ],
+        "timeframe": "Response within 10 business days",
+        "requirements": [
+          "Issue must relate to ESC's regulatory responsibilities",
+          "Must involve Victorian essential services"
+        ]
+      }
+    }
+  ]
+}
