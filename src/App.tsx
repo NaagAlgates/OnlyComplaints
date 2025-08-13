@@ -58,15 +58,19 @@ function App() {
     margin: '0 auto',
     padding: '0 1rem',
     width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: searchResults.length > 0 || selectedCompany ? 'flex-start' : 'center',
   };
 
   const heroStyles: React.CSSProperties = {
     textAlign: 'center',
     padding: '3rem 0',
     backgroundColor: '#fff',
-    marginBottom: '2rem',
+    marginBottom: searchResults.length > 0 ? '2rem' : '0',
     borderRadius: '12px',
     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    transform: searchResults.length === 0 && !selectedCompany ? 'translateY(-10vh)' : 'none',
   };
 
   const titleStyles: React.CSSProperties = {
