@@ -66,7 +66,9 @@ function App() {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: searchResults.length > 0 || selectedCompany ? 'flex-start' : 'center',
+    justifyContent: 'flex-start',
+    paddingTop: searchResults.length > 0 || selectedCompany ? '2rem' : '20vh',
+    transition: 'padding-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   };
 
   const heroStyles: React.CSSProperties = {
@@ -76,7 +78,7 @@ function App() {
     marginBottom: searchResults.length > 0 ? '2rem' : '0',
     borderRadius: '12px',
     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-    transform: searchResults.length === 0 && !selectedCompany ? 'translateY(-10vh)' : 'none',
+    transition: 'margin-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   };
 
   const titleStyles: React.CSSProperties = {
@@ -90,7 +92,9 @@ function App() {
     display: 'grid',
     gap: '1rem',
     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    marginTop: '2rem',
+    marginTop: '1rem',
+    opacity: searchResults.length > 0 ? 1 : 0,
+    transition: 'opacity 0.4s ease-out',
   };
 
   return (
@@ -128,7 +132,9 @@ function App() {
                 color: '#666',
                 backgroundColor: '#fff',
                 borderRadius: '8px',
-                marginTop: '2rem'
+                marginTop: '1rem',
+                opacity: 1,
+                transition: 'opacity 0.3s ease-out',
               }}>
                 <p>No companies found for "{searchQuery}". Try a different search term or company name.</p>
               </div>
