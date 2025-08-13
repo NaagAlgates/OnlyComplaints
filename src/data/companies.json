@@ -9,7 +9,7 @@
       "website": "https://www.telstra.com.au",
       "contact": {
         "phone": "132 200",
-        "email": "customer.service@telstra.com",
+        "email": "NA",
         "address": {
           "street": "242 Exhibition Street",
           "city": "Melbourne",
@@ -30,7 +30,7 @@
           "timeframe": "15 business days for resolution",
           "contactDetails": {
             "phone": "132 200",
-            "email": "complaints@telstra.com",
+            "email": "NA",
             "onlineForm": "https://www.telstra.com.au/contact-us/feedback-complaints"
           }
         },
@@ -57,7 +57,7 @@
       "website": "https://www.optus.com.au",
       "contact": {
         "phone": "133 937",
-        "email": "customer.care@optus.com.au",
+        "email": "NA",
         "address": {
           "street": "1 Lyonpark Road",
           "city": "Macquarie Park",
@@ -78,7 +78,7 @@
           "timeframe": "10-15 business days",
           "contactDetails": {
             "phone": "133 937",
-            "email": "complaints@optus.com.au",
+            "email": "NA",
             "onlineForm": "https://www.optus.com.au/support/contact-us/complaints"
           }
         },
@@ -105,7 +105,7 @@
       "website": "https://www.commbank.com.au",
       "contact": {
         "phone": "13 2221",
-        "email": "feedback@cba.com.au",
+        "email": "NA",
         "address": {
           "street": "Ground Floor, Tower 1, 201 Sussex Street",
           "city": "Sydney",
@@ -126,7 +126,7 @@
           "timeframe": "21 days for most complaints, 45 days for complex issues",
           "contactDetails": {
             "phone": "13 2221",
-            "email": "customer.relations@cba.com.au",
+            "email": "NA",
             "onlineForm": "https://www.commbank.com.au/support/complaint.html"
           }
         },
@@ -153,7 +153,7 @@
       "website": "https://www.woolworths.com.au",
       "contact": {
         "phone": "1800 000 610",
-        "email": "customercare@woolworths.com.au",
+        "email": "NA",
         "address": {
           "street": "1 Woolworths Way",
           "city": "Bella Vista",
@@ -174,7 +174,7 @@
           "timeframe": "5-10 business days",
           "contactDetails": {
             "phone": "1800 000 610",
-            "email": "customercare@woolworths.com.au",
+            "email": "NA",
             "onlineForm": "https://www.woolworths.com.au/shop/discover/contact-us"
           }
         },
