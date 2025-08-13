@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Company } from '../types';
+import { trackEngagementMilestone } from '../utils/analytics';
 
 interface CompanyDetailProps {
   company: Company;
@@ -8,6 +9,11 @@ interface CompanyDetailProps {
 }
 
 export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack }) => {
+  // Track when complaint process is viewed
+  useEffect(() => {
+    trackEngagementMilestone('complaint_process_viewed');
+  }, []);
+
   const containerStyles: React.CSSProperties = {
     backgroundColor: 'white',
     borderRadius: '12px',

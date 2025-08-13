@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
 import { CompanyCard } from './components/CompanyCard';
 import { CompanyDetail } from './components/CompanyDetail';
@@ -6,15 +9,33 @@ import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
 import {
+  analyticsConfig,
+  isAnalyticsConfigured,
+} from './config/analytics';
+import {
   getCompanyById,
   searchCompanies,
 } from './data/companies';
 import { Company } from './types';
+import {
+  initializeAnalytics,
+  trackCompanyView,
+  trackEngagementMilestone,
+  trackSearch,
+} from './utils/analytics';
 
 function App() {
   const [searchResults, setSearchResults] = useState<Company[]>([]);
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
+
+  // Initialize Google Analytics
+  useEffect(() => {
+    if (isAnalyticsConfigured()) {
+      initializeAnalytics(analyticsConfig);
+    }
+  }, []);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -22,6 +43,18 @@ function App() {
       const results = searchCompanies(query);
       setSearchResults(results);
       setSelectedCompany(null);
+
+      // Track search event
+      trackSearch({
+        query: query.trim(),
+        resultsCount: results.length
+      });
+
+      // Track first search milestone
+      if (!hasSearched) {
+        trackEngagementMilestone('first_search');
+        setHasSearched(true);
+      }
     } else {
       setSearchResults([]);
       setSelectedCompany(null);
@@ -38,9 +71,21 @@ function App() {
     const company = getCompanyById(companyId);
     if (company) {
       setSelectedCompany(company);
-      setSearchResults([]);
+
+      // Track company view
+      trackCompanyView({
+        companyId: company.id,
+        companyName: company.name,
+        industry: company.industry,
+        source: searchQuery ? 'search' : 'direct'
+      });
+
+      // Track milestone
+      trackEngagementMilestone('company_selected');
     }
   };
+
+
 
   const handleBackToSearch = () => {
     setSelectedCompany(null);
