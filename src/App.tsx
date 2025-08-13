@@ -71,23 +71,6 @@ function App() {
     transition: 'padding-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   };
 
-  const heroStyles: React.CSSProperties = {
-    textAlign: 'center',
-    padding: '4rem 0 3rem 0',
-    backgroundColor: '#fff',
-    marginBottom: searchResults.length > 0 ? '2rem' : '0',
-    borderRadius: '12px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-    transition: 'margin-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-  };
-
-  const titleStyles: React.CSSProperties = {
-    fontSize: '2.5rem',
-    fontWeight: '700',
-    color: '#1a1a1a',
-    marginBottom: '2rem',
-  };
-
   const resultsStyles: React.CSSProperties = {
     display: 'grid',
     gap: '1rem',
@@ -104,8 +87,7 @@ function App() {
       <main style={mainStyles}>
         {!selectedCompany ? (
           <>
-            <div style={heroStyles}>
-              <h1 style={titleStyles}>OnlyComplaints</h1>
+            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
               <SearchBar 
                 value={searchQuery}
                 onSearch={handleSearch} 
