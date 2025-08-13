@@ -184,18 +184,6 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
     return phone;
   };
 
-  const getRatingColor = (rating: number) => {
-    if (rating >= 4) return '#28a745';
-    if (rating >= 3) return '#ffc107';
-    return '#dc3545';
-  };
-
-  const getRatingText = (rating: number) => {
-    if (rating >= 4) return 'Good';
-    if (rating >= 3) return 'Average';
-    return 'Poor';
-  };
-
   return (
     <div style={containerStyles}>
       <button
@@ -433,63 +421,6 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
           </p>
         </div>
       </div>
-
-      {company.rating && (
-        <div style={sectionStyles}>
-          <h2 style={sectionTitleStyles}>
-            <span>⭐</span> Community Ratings
-          </h2>
-          <div style={cardStyles}>
-            <p style={{ marginTop: 0, marginBottom: '1rem', color: '#666' }}>
-              Based on user feedback and complaint resolution data:
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '0.25rem' }}>Response Time</div>
-                <div style={{ 
-                  fontSize: '1.5rem', 
-                  fontWeight: '600', 
-                  color: getRatingColor(company.rating.responseTime),
-                  marginBottom: '0.25rem'
-                }}>
-                  {company.rating.responseTime}/5
-                </div>
-                <div style={{ fontSize: '0.8rem', color: getRatingColor(company.rating.responseTime) }}>
-                  {getRatingText(company.rating.responseTime)}
-                </div>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '0.25rem' }}>Resolution Quality</div>
-                <div style={{ 
-                  fontSize: '1.5rem', 
-                  fontWeight: '600', 
-                  color: getRatingColor(company.rating.resolution),
-                  marginBottom: '0.25rem'
-                }}>
-                  {company.rating.resolution}/5
-                </div>
-                <div style={{ fontSize: '0.8rem', color: getRatingColor(company.rating.resolution) }}>
-                  {getRatingText(company.rating.resolution)}
-                </div>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '0.25rem' }}>Overall Satisfaction</div>
-                <div style={{ 
-                  fontSize: '1.5rem', 
-                  fontWeight: '600', 
-                  color: getRatingColor(company.rating.satisfaction),
-                  marginBottom: '0.25rem'
-                }}>
-                  {company.rating.satisfaction}/5
-                </div>
-                <div style={{ fontSize: '0.8rem', color: getRatingColor(company.rating.satisfaction) }}>
-                  {getRatingText(company.rating.satisfaction)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

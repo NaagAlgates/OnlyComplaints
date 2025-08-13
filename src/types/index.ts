@@ -33,11 +33,6 @@ export interface Company {
     };
   };
   commonIssues: string[];
-  rating?: {
-    responseTime: number; // 1-5 scale
-    resolution: number; // 1-5 scale
-    satisfaction: number; // 1-5 scale
-  };
 }
 
 export interface GovernmentAgency {

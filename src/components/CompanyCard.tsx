@@ -14,8 +14,9 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company, onSelect }) =
     padding: '1.5rem',
     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
     cursor: 'pointer',
-    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+    transition: 'all 0.2s ease',
     border: '1px solid #f0f0f0',
+    position: 'relative',
   };
 
   const headerStyles: React.CSSProperties = {
@@ -84,36 +85,6 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company, onSelect }) =
     marginBottom: '0.5rem',
   };
 
-  const ratingStyles: React.CSSProperties = {
-    display: 'flex',
-    gap: '1rem',
-    marginTop: '1rem',
-    paddingTop: '1rem',
-    borderTop: '1px solid #f0f0f0',
-  };
-
-  const ratingItemStyles: React.CSSProperties = {
-    textAlign: 'center',
-    flex: 1,
-  };
-
-  const ratingLabelStyles: React.CSSProperties = {
-    fontSize: '0.8rem',
-    color: '#666',
-    marginBottom: '0.25rem',
-  };
-
-  const ratingValueStyles: React.CSSProperties = {
-    fontSize: '1.2rem',
-    fontWeight: '600',
-  };
-
-  const getRatingColor = (rating: number) => {
-    if (rating >= 4) return '#28a745';
-    if (rating >= 3) return '#ffc107';
-    return '#dc3545';
-  };
-
   const formatPhoneNumber = (phone: string) => {
     // Simple formatting for Australian phone numbers
     if (phone.startsWith('13')) {
@@ -127,12 +98,28 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company, onSelect }) =
       style={cardStyles}
       onClick={() => onSelect(company.id)}
       onMouseOver={(e) => {
-        e.currentTarget.style.transform = 'translateY(-2px)';
-        e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+        e.currentTarget.style.borderColor = '#1e3a8a';
+        
+        // Enhance the click indicator on hover
+        const clickIndicator = e.currentTarget.querySelector('[data-click-indicator]') as HTMLElement;
+        if (clickIndicator) {
+          clickIndicator.style.color = '#f97316';
+          clickIndicator.style.transform = 'translateX(5px)';
+        }
       }}
       onMouseOut={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        e.currentTarget.style.borderColor = '#f0f0f0';
+        
+        // Reset the click indicator
+        const clickIndicator = e.currentTarget.querySelector('[data-click-indicator]') as HTMLElement;
+        if (clickIndicator) {
+          clickIndicator.style.color = '#1e3a8a';
+          clickIndicator.style.transform = 'translateX(0)';
+        }
       }}
     >
       <div style={headerStyles}>
@@ -178,44 +165,29 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company, onSelect }) =
           )}
         </div>
       </div>
-
-      {company.rating && (
-        <div style={ratingStyles}>
-          <div style={ratingItemStyles}>
-            <div style={ratingLabelStyles}>Response</div>
-            <div
-              style={{
-                ...ratingValueStyles,
-                color: getRatingColor(company.rating.responseTime),
-              }}
-            >
-              {company.rating.responseTime}/5
-            </div>
-          </div>
-          <div style={ratingItemStyles}>
-            <div style={ratingLabelStyles}>Resolution</div>
-            <div
-              style={{
-                ...ratingValueStyles,
-                color: getRatingColor(company.rating.resolution),
-              }}
-            >
-              {company.rating.resolution}/5
-            </div>
-          </div>
-          <div style={ratingItemStyles}>
-            <div style={ratingLabelStyles}>Satisfaction</div>
-            <div
-              style={{
-                ...ratingValueStyles,
-                color: getRatingColor(company.rating.satisfaction),
-              }}
-            >
-              {company.rating.satisfaction}/5
-            </div>
-          </div>
-        </div>
-      )}
+      
+      {/* Click for more indicator */}
+      <div 
+        data-click-indicator
+        style={{
+          marginTop: '1rem',
+          paddingTop: '1rem',
+          borderTop: '1px solid #f0f0f0',
+          textAlign: 'center',
+          color: '#1e3a8a',
+          fontSize: '0.9rem',
+          fontWeight: '500',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.5rem',
+          transition: 'all 0.2s ease',
+          transform: 'translateX(0)'
+        }}
+      >
+        <span>Click for complaint process & details</span>
+        <span style={{ fontSize: '0.8rem' }}>→</span>
+      </div>
     </div>
   );
 };

@@ -48,12 +48,7 @@ export const companies: Company[] = [
       'Internet speed issues',
       'Contract disputes',
       'Unexpected charges'
-    ],
-    rating: {
-      responseTime: 3,
-      resolution: 3,
-      satisfaction: 3
-    }
+    ]
   },
   {
     id: 'optus',
@@ -101,12 +96,7 @@ export const companies: Company[] = [
       'Data speed problems',
       'Customer service delays',
       'Plan changes disputes'
-    ],
-    rating: {
-      responseTime: 3,
-      resolution: 2,
-      satisfaction: 2
-    }
+    ]
   },
   {
     id: 'cba',
@@ -154,12 +144,7 @@ export const companies: Company[] = [
       'Account fees disputes',
       'Online banking issues',
       'Credit card disputes'
-    ],
-    rating: {
-      responseTime: 4,
-      resolution: 3,
-      satisfaction: 3
-    }
+    ]
   },
   {
     id: 'woolworths',
@@ -207,12 +192,7 @@ export const companies: Company[] = [
       'Online delivery problems',
       'Refund disputes',
       'Food safety concerns'
-    ],
-    rating: {
-      responseTime: 4,
-      resolution: 4,
-      satisfaction: 4
-    }
+    ]
   },
   {
     id: 'origin-energy',
@@ -260,12 +240,7 @@ export const companies: Company[] = [
       'Meter reading issues',
       'Contract disputes',
       'Poor customer service'
-    ],
-    rating: {
-      responseTime: 2,
-      resolution: 2,
-      satisfaction: 2
-    }
+    ]
   }
 ];
 
