@@ -45,8 +45,8 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
   const industryTagStyles: React.CSSProperties = {
     display: 'inline-block',
     padding: '0.5rem 1rem',
-    backgroundColor: '#e3f2fd',
-    color: '#1565c0',
+    backgroundColor: '#fef3c7',
+    color: '#f97316',
     borderRadius: '25px',
     fontSize: '0.9rem',
     fontWeight: '600',
@@ -113,7 +113,7 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
   };
 
   const stepNumberStyles: React.CSSProperties = {
-    backgroundColor: '#007bff',
+    backgroundColor: '#1e3a8a',
     color: 'white',
     borderRadius: '50%',
     width: '24px',
@@ -253,7 +253,7 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
                     href={company.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: '#007bff', textDecoration: 'none' }}
+                    style={{ color: '#f97316', textDecoration: 'none' }}
                   >
                     {company.website.replace('https://', '').replace('http://', '')}
                   </a>
@@ -347,7 +347,7 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
                     href={company.complaints.internalProcess.contactDetails.onlineForm}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: '#007bff', textDecoration: 'none' }}
+                    style={{ color: '#f97316', textDecoration: 'none' }}
                   >
                     Online Complaint Form
                   </a>
@@ -397,7 +397,7 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
                     href={agency.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: '#007bff', textDecoration: 'none' }}
+                    style={{ color: '#f97316', textDecoration: 'none' }}
                   >
                     Visit Website
                   </a>
@@ -411,7 +411,7 @@ export const CompanyDetail: React.FC<CompanyDetailProps> = ({ company, onBack })
                       href={agency.contact.onlineForm}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#007bff', textDecoration: 'none' }}
+                      style={{ color: '#f97316', textDecoration: 'none' }}
                     >
                       File Complaint Online
                     </a>

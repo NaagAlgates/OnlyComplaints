@@ -28,6 +28,12 @@ function App() {
     }
   };
 
+  const handleClearSearch = () => {
+    setSearchQuery('');
+    setSearchResults([]);
+    setSelectedCompany(null);
+  };
+
   const handleCompanySelect = (companyId: string) => {
     const company = getCompanyById(companyId);
     if (company) {
@@ -96,7 +102,11 @@ function App() {
           <>
             <div style={heroStyles}>
               <h1 style={titleStyles}>OnlyComplaints</h1>
-              <SearchBar onSearch={handleSearch} />
+              <SearchBar 
+                value={searchQuery}
+                onSearch={handleSearch} 
+                onClear={handleClearSearch}
+              />
             </div>
 
             {searchResults.length > 0 && (

@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
   const logoStyles: React.CSSProperties = {
     fontSize: '1.5rem',
     fontWeight: '700',
-    color: '#007bff',
+    color: '#1e3a8a',
     textDecoration: 'none',
   };
 
@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
             href="#about"
             style={linkStyles}
             onMouseOver={(e) => {
-              e.currentTarget.style.color = '#007bff';
+              e.currentTarget.style.color = '#f97316';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.color = '#666';
@@ -77,7 +77,7 @@ export const Header: React.FC = () => {
             rel="noopener noreferrer"
             style={linkStyles}
             onMouseOver={(e) => {
-              e.currentTarget.style.color = '#007bff';
+              e.currentTarget.style.color = '#f97316';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.color = '#666';

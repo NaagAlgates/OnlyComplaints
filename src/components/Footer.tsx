@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
             href="#privacy"
             style={linkStyles}
             onMouseOver={(e) => {
-              e.currentTarget.style.color = '#007bff';
+              e.currentTarget.style.color = '#f97316';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.color = '#666';
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
             href="#terms"
             style={linkStyles}
             onMouseOver={(e) => {
-              e.currentTarget.style.color = '#007bff';
+              e.currentTarget.style.color = '#f97316';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.color = '#666';
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
             rel="noopener noreferrer"
             style={linkStyles}
             onMouseOver={(e) => {
-              e.currentTarget.style.color = '#007bff';
+              e.currentTarget.style.color = '#f97316';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.color = '#666';
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
             href="#contact"
             style={linkStyles}
             onMouseOver={(e) => {
-              e.currentTarget.style.color = '#007bff';
+              e.currentTarget.style.color = '#f97316';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.color = '#666';

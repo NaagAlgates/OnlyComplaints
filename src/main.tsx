@@ -21,7 +21,7 @@ const globalStyles = `
   }
 
   a {
-    color: #007bff;
+    color: #f97316;
     text-decoration: none;
   }
 

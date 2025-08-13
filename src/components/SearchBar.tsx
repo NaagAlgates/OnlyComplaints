@@ -8,14 +8,21 @@ import { searchCompanies } from '../data/companies';
 import { Company } from '../types';
 
 interface SearchBarProps {
+  value?: string;
   onSearch: (query: string) => void;
+  onClear?: () => void;
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+export const SearchBar: React.FC<SearchBarProps> = ({ value, onSearch, onClear }) => {
+  const [query, setQuery] = useState(value || '');
   const [suggestions, setSuggestions] = useState<Company[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Sync with external value prop
+  useEffect(() => {
+    setQuery(value || '');
+  }, [value]);
 
   useEffect(() => {
     if (query.trim().length > 1) {
@@ -38,6 +45,14 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     setShowSuggestions(false);
   };
 
+  const handleClear = () => {
+    setQuery('');
+    setShowSuggestions(false);
+    if (onClear) {
+      onClear();
+    }
+  };
+
   const handleSuggestionClick = (company: Company) => {
     setQuery(company.name);
     onSearch(company.name);
@@ -53,38 +68,59 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     }
   };
 
-  const containerStyles: React.CSSProperties = {
+    const containerStyles: React.CSSProperties = {
     position: 'relative',
+    width: '100%',
     maxWidth: '600px',
     margin: '0 auto',
   };
 
   const inputContainerStyles: React.CSSProperties = {
-    display: 'flex',
-    gap: '0.5rem',
-    alignItems: 'center',
+    position: 'relative',
+    maxWidth: '600px',
+    margin: '0 auto',
   };
 
   const inputStyles: React.CSSProperties = {
-    flex: 1,
-    padding: '1rem 1.5rem',
+    width: '100%',
+    padding: '1rem 1.5rem 1rem 3rem',
     fontSize: '1.1rem',
     border: '2px solid #e1e5e9',
     borderRadius: '50px',
     outline: 'none',
-    transition: 'border-color 0.2s ease',
+    transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
   };
 
-  const buttonStyles: React.CSSProperties = {
-    padding: '1rem 2rem',
-    fontSize: '1.1rem',
-    backgroundColor: '#007bff',
-    color: 'white',
-    border: 'none',
-    borderRadius: '50px',
+  const searchIconStyles: React.CSSProperties = {
+    position: 'absolute',
+    left: '1.2rem',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    color: '#9ca3af',
+    fontSize: '1.2rem',
+    pointerEvents: 'none',
+  };
+
+  const clearIconStyles: React.CSSProperties = {
+    position: 'absolute',
+    right: '1.2rem',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    color: '#6b7280',
+    fontSize: '1rem',
     cursor: 'pointer',
-    fontWeight: '600',
-    transition: 'background-color 0.2s ease',
+    padding: '0.4rem',
+    borderRadius: '50%',
+    backgroundColor: '#f3f4f6',
+    border: '1px solid #e5e7eb',
+    transition: 'all 0.2s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '1.8rem',
+    height: '1.8rem',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
   };
 
   const suggestionsStyles: React.CSSProperties = {
@@ -123,6 +159,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   return (
     <div style={containerStyles}>
       <div style={inputContainerStyles}>
+        <div style={searchIconStyles}>🔍</div>
         <input
           ref={inputRef}
           type="text"
@@ -135,20 +172,41 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
             if (suggestions.length > 0) {
               setShowSuggestions(true);
             }
+            // Add focus styling
+            (document.activeElement as HTMLInputElement).style.borderColor = '#1e3a8a';
+            (document.activeElement as HTMLInputElement).style.boxShadow = '0 0 0 3px rgba(30, 58, 138, 0.1)';
+          }}
+          onBlur={() => {
+            // Remove focus styling
+            setTimeout(() => {
+              if (inputRef.current) {
+                inputRef.current.style.borderColor = '#e1e5e9';
+                inputRef.current.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+              }
+              setShowSuggestions(false);
+            }, 200);
           }}
         />
-        <button
-          onClick={handleSearch}
-          style={buttonStyles}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#0056b3';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#007bff';
-          }}
-        >
-          Search
-        </button>
+        {query && (
+          <div 
+            style={clearIconStyles}
+            onClick={handleClear}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = '#1e3a8a';
+              e.currentTarget.style.color = 'white';
+              e.currentTarget.style.borderColor = '#1e3a8a';
+              e.currentTarget.style.transform = 'translateY(-50%) scale(1.05)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = '#f3f4f6';
+              e.currentTarget.style.color = '#6b7280';
+              e.currentTarget.style.borderColor = '#e5e7eb';
+              e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+            }}
+          >
+            ✕
+          </div>
+        )}
       </div>
 
       {showSuggestions && suggestions.length > 0 && (

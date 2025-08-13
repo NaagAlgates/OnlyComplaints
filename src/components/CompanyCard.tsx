@@ -32,8 +32,8 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company, onSelect }) =
   const industryStyles: React.CSSProperties = {
     display: 'inline-block',
     padding: '0.25rem 0.75rem',
-    backgroundColor: '#e3f2fd',
-    color: '#1565c0',
+    backgroundColor: '#fef3c7',
+    color: '#f97316',
     borderRadius: '20px',
     fontSize: '0.85rem',
     fontWeight: '500',

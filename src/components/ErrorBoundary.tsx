@@ -54,7 +54,7 @@ export class ErrorBoundary extends Component<Props, State> {
       };
 
       const buttonStyles: React.CSSProperties = {
-        backgroundColor: '#007bff',
+        backgroundColor: '#1e3a8a',
         color: 'white',
         border: 'none',
         borderRadius: '8px',
@@ -75,10 +75,10 @@ export class ErrorBoundary extends Component<Props, State> {
             style={buttonStyles}
             onClick={() => window.location.reload()}
             onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = '#0056b3';
+              e.currentTarget.style.backgroundColor = '#1e2563';
             }}
             onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = '#007bff';
+              e.currentTarget.style.backgroundColor = '#1e3a8a';
             }}
           >
             Refresh Page
