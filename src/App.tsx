@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { SearchBar } from './components/SearchBar';
+import { TermsOfUse } from './components/TermsOfUse';
 import {
   analyticsConfig,
   isAnalyticsConfigured,
@@ -31,6 +32,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showTermsOfUse, setShowTermsOfUse] = useState(false);
 
   // Handle browser navigation (back/forward buttons)
   useEffect(() => {
@@ -40,6 +42,12 @@ function App() {
       
       if (hash === '#privacy') {
         setShowPrivacyPolicy(true);
+        setShowTermsOfUse(false);
+        setSelectedCompany(null);
+        setSearchResults([]);
+      } else if (hash === '#terms') {
+        setShowTermsOfUse(true);
+        setShowPrivacyPolicy(false);
         setSelectedCompany(null);
         setSearchResults([]);
       } else if (hash.startsWith('#company/')) {
@@ -48,10 +56,12 @@ function App() {
         if (company) {
           setSelectedCompany(company);
           setShowPrivacyPolicy(false);
+          setShowTermsOfUse(false);
         }
       } else {
         // No hash or unknown hash - go to home
         setShowPrivacyPolicy(false);
+        setShowTermsOfUse(false);
         setSelectedCompany(null);
         // Don't clear search results on back to home
       }
@@ -168,7 +178,7 @@ function App() {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    paddingTop: searchResults.length > 0 || selectedCompany || showPrivacyPolicy ? '2rem' : '20vh',
+    paddingTop: searchResults.length > 0 || selectedCompany || showPrivacyPolicy || showTermsOfUse ? '2rem' : '20vh',
     transition: 'padding-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   };
 
@@ -191,6 +201,8 @@ function App() {
       <main style={mainStyles}>
         {showPrivacyPolicy ? (
           <PrivacyPolicy />
+        ) : showTermsOfUse ? (
+          <TermsOfUse />
         ) : !selectedCompany ? (
           <>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>

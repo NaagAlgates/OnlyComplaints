@@ -7,7 +7,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ 
   onHomeClick, 
-  showPrivacyLink = false 
 }) => {
   const headerStyles: React.CSSProperties = {
     backgroundColor: '#fff',
@@ -86,20 +85,6 @@ export const Header: React.FC<HeaderProps> = ({
           <span style={betaTagStyles}>BETA</span>
         </div>
         <nav style={navStyles}>
-          {showPrivacyLink && (
-            <a
-              href="#privacy"
-              style={linkStyles}
-              onMouseOver={(e) => {
-                e.currentTarget.style.color = '#f97316';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.color = '#666';
-              }}
-            >
-              Privacy Policy
-            </a>
-          )}
           <a
             href="#about"
             style={linkStyles}
