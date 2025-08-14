@@ -20,5 +20,9 @@ export default defineConfig({
   },
   server: {
     open: true
+  },
+  // Ensure proper handling for GitHub Pages
+  esbuild: {
+    target: 'es2015'
   }
 })
