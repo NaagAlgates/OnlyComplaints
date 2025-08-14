@@ -1,0 +1,580 @@
+{
+  "agencies": [
+    {
+      "id": "tio",
+      "name": "Telecommunications Industry Ombudsman",
+      "acronym": "TIO",
+      "description": "Independent dispute resolution service for small business and residential consumers in Australia who have a complaint about their telephone or internet service.",
+      "website": "https://www.tio.com.au",
+      "contact": {
+        "phone": "1800 062 058",
+        "email": "enquiries@tio.com.au",
+        "onlineForm": "https://www.tio.com.au/making-a-complaint"
+      },
+      "jurisdiction": "federal",
+      "industries": ["telecommunications"],
+      "complaintTypes": [
+        "Billing disputes",
+        "Service faults",
+        "Contract disputes",
+        "Connection issues",
+        "Poor customer service"
+      ],
+      "process": {
+        "steps": [
+          "Contact your service provider first",
+          "Wait at least 8 weeks for resolution or receive a deadlock letter",
+          "Submit complaint to TIO online, by phone, or post",
+          "TIO will investigate and work toward resolution",
+          "Binding decision may be issued if needed"
+        ],
+        "timeframe": "Most complaints resolved within 10 business days",
+        "requirements": [
+          "Must be a small business or residential consumer",
+          "Must have attempted resolution with provider first",
+          "Complaint must be about a TIO member service"
+        ]
+      }
+    },
+    {
+      "id": "acma",
+      "name": "Australian Communications and Media Authority",
+      "acronym": "ACMA",
+      "description": "Regulates broadcasting, internet, radiocommunications and telecommunications in Australia.",
+      "website": "https://www.acma.gov.au",
+      "contact": {
+        "phone": "1800 803 772",
+        "email": "info@acma.gov.au",
+        "onlineForm": "https://www.acma.gov.au/report-a-problem"
+      },
+      "jurisdiction": "federal",
+      "industries": ["telecommunications", "media"],
+      "complaintTypes": [
+        "Regulatory breaches",
+        "Accessibility issues",
+        "Privacy concerns",
+        "Spam and scams",
+        "Broadcasting content"
+      ],
+      "process": {
+        "steps": [
+          "Report the issue online or by phone",
+          "ACMA will assess if it falls under their jurisdiction",
+          "Investigation may be conducted if warranted",
+          "Enforcement action taken if breaches found"
+        ],
+        "timeframe": "Assessment within 10 business days",
+        "requirements": [
+          "Issue must relate to ACMA's regulatory responsibilities",
+          "Evidence of the problem should be provided"
+        ]
+      }
+    },
+    {
+      "id": "afca",
+      "name": "Australian Financial Complaints Authority",
+      "acronym": "AFCA",
+      "description": "Independent dispute resolution service for consumers and small businesses with complaints about financial services.",
+      "website": "https://www.afca.org.au",
+      "contact": {
+        "phone": "1800 931 678",
+        "email": "info@afca.org.au",
+        "onlineForm": "https://www.afca.org.au/make-a-complaint"
+      },
+      "jurisdiction": "federal",
+      "industries": ["banking", "insurance", "superannuation", "credit"],
+      "complaintTypes": [
+        "Banking disputes",
+        "Insurance claims",
+        "Credit issues",
+        "Investment disputes",
+        "Superannuation problems"
+      ],
+      "process": {
+        "steps": [
+          "Contact your financial service provider first",
+          "Wait for their internal dispute resolution process",
+          "Submit complaint to AFCA if unresolved after 45 days",
+          "AFCA will review and investigate",
+          "Binding determination may be issued"
+        ],
+        "timeframe": "Most complaints resolved within 30-120 days",
+        "requirements": [
+          "Must be a consumer or small business",
+          "Complaint must be about an AFCA member",
+          "Internal dispute resolution must be attempted first"
+        ]
+      }
+    },
+    {
+      "id": "accc",
+      "name": "Australian Competition and Consumer Commission",
+      "acronym": "ACCC",
+      "description": "Promotes competition and fair trading and regulates national infrastructure for the benefit of all Australians.",
+      "website": "https://www.accc.gov.au",
+      "contact": {
+        "phone": "1300 302 502",
+        "email": "infocentre@accc.gov.au",
+        "onlineForm": "https://www.accc.gov.au/contact-us/contact-the-accc"
+      },
+      "jurisdiction": "federal",
+      "industries": ["retail", "consumer goods", "competition"],
+      "complaintTypes": [
+        "Misleading advertising",
+        "Product safety issues",
+        "Anti-competitive behavior",
+        "Consumer guarantees",
+        "Unfair trading"
+      ],
+      "process": {
+        "steps": [
+          "Report the issue online via Scamwatch or contact form",
+          "Provide detailed information and evidence",
+          "ACCC will assess the report",
+          "Investigation may be conducted for systemic issues",
+          "Enforcement action taken if breaches found"
+        ],
+        "timeframe": "Assessment within 20 business days",
+        "requirements": [
+          "Issue must involve potential breaches of consumer law",
+          "Evidence and documentation should be provided"
+        ]
+      }
+    },
+    {
+      "id": "ewon-nsw",
+      "name": "Energy & Water Ombudsman NSW",
+      "acronym": "EWON",
+      "description": "Independent dispute resolution service for electricity, gas and water complaints in NSW.",
+      "website": "https://www.ewon.com.au",
+      "contact": {
+        "phone": "1800 246 545",
+        "email": "omb@ewon.com.au",
+        "onlineForm": "https://www.ewon.com.au/complaints/lodge-a-complaint"
+      },
+      "jurisdiction": "state",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "Billing disputes",
+        "Supply issues",
+        "Connection problems",
+        "Contract disputes",
+        "Customer service issues"
+      ],
+      "process": {
+        "steps": [
+          "Contact your energy/water provider first",
+          "Wait for their complaints process (up to 20 business days)",
+          "Contact EWON if unresolved",
+          "EWON will investigate and mediate",
+          "Binding decision may be issued"
+        ],
+        "timeframe": "Most complaints resolved within 20 business days",
+        "requirements": [
+          "Must be a NSW residential or small business customer",
+          "Must have attempted resolution with provider first"
+        ]
+      }
+    },
+    {
+      "id": "esc-vic",
+      "name": "Essential Services Commission Victoria",
+      "acronym": "ESC",
+      "description": "Independent regulator of essential services in Victoria including energy, water, and transport.",
+      "website": "https://www.esc.vic.gov.au",
+      "contact": {
+        "phone": "1300 664 969",
+        "email": "enquiries@esc.vic.gov.au",
+        "onlineForm": "https://www.esc.vic.gov.au/about-us/contact-us"
+      },
+      "jurisdiction": "state",
+      "industries": ["energy", "water", "transport"],
+      "complaintTypes": [
+        "Energy pricing",
+        "Service standards",
+        "Regulatory compliance",
+        "Access arrangements"
+      ],
+      "process": {
+        "steps": [
+          "Submit enquiry or complaint online",
+          "ESC will assess if it's within their jurisdiction",
+          "Investigation conducted if regulatory issue identified",
+          "Enforcement action taken if needed"
+        ],
+        "timeframe": "Response within 10 business days",
+        "requirements": [
+          "Issue must relate to ESC's regulatory responsibilities",
+          "Must involve Victorian essential services"
+        ]
+      }
+    },
+    {
+      "id": "ewoq-qld",
+      "name": "Energy and Water Ombudsman Queensland",
+      "acronym": "EWOQ",
+      "description": "Provides a free, fair and independent dispute resolution service for Queensland electricity, gas and water customers.",
+      "website": "https://www.ewoq.com.au",
+      "contact": {
+        "phone": "1800 662 837",
+        "email": "info@ewoq.com.au",
+        "onlineForm": "https://www.ewoq.com.au/make-a-complaint"
+      },
+      "jurisdiction": "Queensland",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "Billing disputes and high bills",
+        "Meter or supply issues",
+        "Connection or transfer problems",
+        "Disconnection or restriction",
+        "Poor customer service or misleading marketing"
+      ],
+      "process": {
+        "steps": [
+          "Contact your energy or water provider first and give them a chance to resolve the problem",
+          "Collect any documents and details about the issue (account numbers, meter numbers, bills and correspondence)",
+          "If unresolved, lodge a complaint with EWOQ online or by phone",
+          "EWOQ refers your complaint to a senior officer at the provider; the provider must contact you within five business days",
+          "If the issue is still unresolved after about three weeks, EWOQ may start an investigation and work toward an outcome"
+        ],
+        "timeframe": "Provider must contact you within 5 business days; investigations usually take about 20 business days【445490050279875†L190-L222】",
+        "requirements": [
+          "Must be a Queensland residential or small business customer",
+          "Must have attempted to resolve the complaint with the provider first",
+          "Provide relevant documents and details when lodging the complaint"
+        ]
+      }
+    },
+    {
+      "id": "ewov-vic",
+      "name": "Energy and Water Ombudsman Victoria",
+      "acronym": "EWOV",
+      "description": "Free, fair and independent dispute resolution for electricity, gas and water customers in Victoria.",
+      "website": "https://www.ewov.com.au",
+      "contact": {
+        "phone": "1800 500 509",
+        "email": "ewovinfo@ewov.com.au",
+        "onlineForm": "https://www.ewov.com.au/complaints"
+      },
+      "jurisdiction": "Victoria",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "Billing and payment issues",
+        "Disconnection and debt collection",
+        "Supply outages and meter problems",
+        "Connections and transfers",
+        "Customer service and marketing",
+        "Embedded network issues"
+      ],
+      "process": {
+        "steps": [
+          "Contact your company and try to resolve the issue directly",
+          "If unresolved, EWOV will refer your complaint to a senior person at the company who must contact you within three business days",
+          "The company must aim to resolve the complaint within fifteen business days",
+          "If the issue is still unresolved, EWOV investigates and works with both parties to reach an outcome",
+          "EWOV can make a binding decision if necessary"
+        ],
+        "timeframe": "Company must contact you within 3 business days and resolve within 15 business days; investigations may take longer【409012783609108†L116-L144】",
+        "requirements": [
+          "Must be a Victorian residential or small business customer",
+          "Must have attempted to resolve the complaint with the company first",
+          "Provide details of the complaint and any supporting documents"
+        ]
+      }
+    },
+    {
+      "id": "ewowa-wa",
+      "name": "Energy and Water Ombudsman Western Australia",
+      "acronym": "EWO WA",
+      "description": "Independent service that investigates and resolves complaints about electricity, gas and water providers in Western Australia.",
+      "website": "https://energyandwater.ombudsman.wa.gov.au",
+      "contact": {
+        "phone": "1800 754 004",
+        "email": "energyandwater@ombudsman.wa.gov.au",
+        "onlineForm": "https://energyandwater.ombudsman.wa.gov.au/make-your-complaint"
+      },
+      "jurisdiction": "Western Australia",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "Billing disputes",
+        "Disconnection or restriction",
+        "Supply or quality issues",
+        "Connection problems",
+        "Customer service issues"
+      ],
+      "process": {
+        "steps": [
+          "Contact your energy or water provider first and use their internal complaints process",
+          "If unresolved, EWO WA will refer the complaint back to the provider and give them ten business days to resolve it",
+          "If the issue remains unresolved, EWO WA will facilitate a conciliation or investigate the matter",
+          "If necessary, the Ombudsman can issue a binding decision"
+        ],
+        "timeframe": "Provider has 10 business days to resolve the issue after referral; investigation time depends on complexity【861451642579969†L115-L170】",
+        "requirements": [
+          "Must be a WA residential or small business customer",
+          "Must have attempted to resolve the complaint with the provider first",
+          "Provide relevant information and documentation when lodging the complaint"
+        ]
+      }
+    },
+    {
+      "id": "ewosa-sa",
+      "name": "Energy and Water Ombudsman South Australia",
+      "acronym": "EWOSA",
+      "description": "Independent service to resolve complaints about electricity, gas and water providers in South Australia.",
+      "website": "https://www.ewosa.com.au",
+      "contact": {
+        "phone": "1800 665 565",
+        "email": "privacy@ewosa.com.au",
+        "onlineForm": "https://www.ewosa.com.au/residential-customers/make-a-complaint"
+      },
+      "jurisdiction": "South Australia",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "Billing disputes and high bills",
+        "Payment difficulties",
+        "Disconnection or restriction of supply",
+        "Meter or supply issues",
+        "Connection problems",
+        "Customer service or marketing issues"
+      ],
+      "process": {
+        "steps": [
+          "Contact your supplier first and gather account and meter details【738679671113378†L59-L83】",
+          "If the supplier doesn’t resolve the issue, contact EWOSA by phone or online form",
+          "EWOSA refers the complaint to the supplier’s higher‑level contact; the supplier must contact you within two business days and investigate within twenty business days【62193995996646†L116-L124】",
+          "If still unresolved, EWOSA will conciliate or investigate and may issue a binding determination【144461425152676†L60-L93】"
+        ],
+        "timeframe": "Supplier must contact you within 2 business days and resolve within 20 business days; further investigations may take longer",
+        "requirements": [
+          "Must be a South Australian residential or small business customer",
+          "Must have attempted to resolve the complaint with the supplier first",
+          "Provide account and meter details and any supporting documents",
+          "Your supply cannot be disconnected while the complaint is open"
+        ]
+      }
+    },
+    {
+      "id": "eot-tas",
+      "name": "Energy Ombudsman Tasmania",
+      "acronym": "EOT",
+      "description": "Independent officer who investigates and resolves complaints about electricity and gas companies in Tasmania.",
+      "website": "https://www.energyombudsman.tas.gov.au",
+      "contact": {
+        "phone": "1800 001 170",
+        "email": "energy.ombudsman@ombudsman.tas.gov.au",
+        "onlineForm": "https://www.energyombudsman.tas.gov.au/complaints"
+      },
+      "jurisdiction": "Tasmania",
+      "industries": ["energy"],
+      "complaintTypes": [
+        "Connections and transfers",
+        "Billing issues and payment difficulties",
+        "Disconnection and restriction",
+        "Metering issues",
+        "Infrastructure, outages and supply problems"
+      ],
+      "process": {
+        "steps": [
+          "Contact your energy provider first and try to resolve the issue",
+          "If unresolved, gather details such as contact information, company name, supply address, complaint details and supporting documents【897816718102708†L24-L116】",
+          "Lodge a complaint with the Energy Ombudsman by phone, online form or in person",
+          "Most complaints are resolved at the preliminary enquiry stage; complex cases may require a formal investigation"
+        ],
+        "timeframe": "No specific timeframe; most complaints are resolved quickly at the preliminary stage, but complex matters may require a formal investigation",
+        "requirements": [
+          "Must have attempted to resolve the complaint with the provider first",
+          "Provide relevant details and supporting documents",
+          "Issue must relate to an energy company operating in Tasmania"
+        ]
+      }
+    },
+    {
+      "id": "acat-act",
+      "name": "ACT Civil and Administrative Tribunal – Energy and Water",
+      "acronym": "ACAT",
+      "description": "ACAT acts as the energy and water ombudsman for the Australian Capital Territory, handling disputes and hardship applications for electricity, gas and water customers.",
+      "website": "https://www.acat.act.gov.au/case-types/energy-and-water-cases",
+      "contact": {
+        "phone": "(02) 6207 1740",
+        "email": "acatenergyandwater@act.gov.au",
+        "onlineForm": "https://www.acat.act.gov.au/case-types/energy-and-water-cases"
+      },
+      "jurisdiction": "Australian Capital Territory",
+      "industries": ["energy", "water"],
+      "complaintTypes": [
+        "High bills and overcharging",
+        "Wrongful disconnection",
+        "Debt collection and default listings",
+        "Payment arrangements for closed accounts",
+        "Direct marketing and sales issues",
+        "Connection and transfer problems",
+        "Vegetation and land access disputes",
+        "Metering, network faults and supply outages"
+      ],
+      "process": {
+        "steps": [
+          "Contact your utility company first and attempt to resolve the issue【721193872428388†L198-L214】",
+          "If unresolved, ask to speak with a senior officer and put your complaint in writing",
+          "If the issue remains unresolved, lodge an energy and water complaint with ACAT via the online form or by phone【721193872428388†L239-L246】",
+          "ACAT will refer your complaint to a higher‑level officer in the utility company; the company has five business days to contact you【721193872428388†L259-L263】",
+          "If the referral does not resolve the issue, ACAT investigates and may make recommendations or refer the matter to a conference or hearing【721193872428388†L259-L293】"
+        ],
+        "timeframe": "The utility company must contact you within 5 business days; ACAT aims to deal with complaints in a timely manner and will contact you by the end of the next business day after a hardship application【721193872428388†L186-L246】",
+        "requirements": [
+          "Must be an ACT electricity, gas or water customer",
+          "Must have attempted to resolve the issue with the utility company first",
+          "Provide details of your communications with the utility, including dates and reference numbers",
+          "Actively participate in the resolution process and respond promptly to ACAT requests"
+        ]
+      }
+    },
+    {
+      "id": "ombudsman-nt",
+      "name": "Ombudsman Northern Territory",
+      "acronym": "Ombudsman NT",
+      "description": "Investigates complaints about Northern Territory government agencies, local councils and energy or water service providers, providing an independent and impartial service.",
+      "website": "https://www.ombudsman.nt.gov.au",
+      "contact": {
+        "phone": "1800 806 380",
+        "email": "nt.ombudsman@nt.gov.au",
+        "onlineForm": "https://www.ombudsman.nt.gov.au/complaints"
+      },
+      "jurisdiction": "Northern Territory",
+      "industries": ["energy", "water", "government"],
+      "complaintTypes": [
+        "Unfair or unreasonable administrative decisions",
+        "Service delays or lack of response from government agencies",
+        "Breach of law or policy by an agency",
+        "Issues with energy or water supply and billing"
+      ],
+      "process": {
+        "steps": [
+          "Submit your complaint online, by phone, in writing or in person, providing details about the issue【22877962581223†L89-L135】",
+          "A case officer will assess whether the complaint is within jurisdiction, whether you’ve already tried to resolve it, and whether it is within 12 months of the event【22877962581223†L89-L135】",
+          "If appropriate, the Ombudsman will attempt to resolve the issue informally or commence an investigation",
+          "During an investigation the case officer will keep you informed and may request additional information",
+          "At the end of the investigation, the Ombudsman may make recommendations to the agency, but cannot compel action【22877962581223†L157-L173】"
+        ],
+        "timeframe": "No fixed timeframe; investigations vary depending on complexity but the case officer will contact you regularly【22877962581223†L137-L150】",
+        "requirements": [
+          "Attempt to resolve the issue with the agency or provider before complaining",
+          "Submit the complaint within 12 months of the event or decision",
+          "Provide all relevant details and respond to requests for information",
+          "The Ombudsman may refer you to another agency if the matter is better handled elsewhere"
+        ]
+      }
+    },
+    {
+      "id": "access-canberra",
+      "name": "Access Canberra",
+      "acronym": "Access Canberra",
+      "description": "ACT Government service that assists consumers with issues involving businesses and traders in the ACT and provides advice and dispute resolution.",
+      "website": "https://www.accesscanberra.act.gov.au",
+      "contact": {
+        "phone": "13 22 81",
+        "email": "",
+        "onlineForm": "https://www.accesscanberra.act.gov.au/contact-us"
+      },
+      "jurisdiction": "Australian Capital Territory",
+      "industries": ["consumer goods", "services"],
+      "complaintTypes": [
+        "Faulty or defective products",
+        "Poor quality services",
+        "Misleading or unfair trading practices",
+        "Scams and unlicensed operators",
+        "Contract disputes with ACT businesses"
+      ],
+      "process": {
+        "steps": [
+          "Contact the business first to explain the problem, what you want done and when, and collect evidence of your contact【419753484111867†L240-L260】",
+          "If the business does not resolve the issue, lodge a complaint with Access Canberra and provide proof of your attempts to resolve the matter【419753484111867†L240-L260】",
+          "Access Canberra will assess your complaint and may provide advice, facilitate discussions with the business or refer you to another agency as appropriate",
+          "They cannot provide legal advice or order compensation but can help negotiate a resolution"
+        ],
+        "timeframe": "Access Canberra aims to resolve non‑regulatory complaints within 10 business days; less‑complex complaints within 30 days; complex matters may take longer but you will receive updates【273175242703793†L101-L151】",
+        "requirements": [
+          "Must have contacted the business first and allowed a reasonable time for them to respond",
+          "Provide evidence of your contact and the problem (receipts, letters, photographs)",
+          "Issue must involve an ACT trader or a product/service purchased by an ACT consumer",
+          "Access Canberra cannot give legal advice or award compensation"
+        ]
+      }
+    },
+    {
+      "id": "cav-vic",
+      "name": "Consumer Affairs Victoria",
+      "acronym": "CAV",
+      "description": "Victoria’s consumer affairs regulator providing information, advice and dispute services for consumers, businesses and rental providers.",
+      "website": "https://www.consumer.vic.gov.au",
+      "contact": {
+        "phone": "1300 55 81 81",
+        "email": "",
+        "onlineForm": "https://www.consumer.vic.gov.au/contact-us"
+      },
+      "jurisdiction": "Victoria",
+      "industries": ["consumer goods", "services", "housing", "motor vehicles"],
+      "complaintTypes": [
+        "Estate agent complaints",
+        "Product safety complaints",
+        "Residential accommodation complaints",
+        "Motor car trader complaints",
+        "Domestic building complaints",
+        "Other consumer issues such as refunds, warranties and unfair practices"
+      ],
+      "process": {
+        "steps": [
+          "Learn about your rights and responsibilities using CAV’s resources【683399733618100†L113-L119】",
+          "Talk to the business, landlord or service provider to explain the problem and try to resolve it (in person, by phone, email or social media)【683399733618100†L140-L169】",
+          "Write to the business or provider, enclosing evidence and referring to your rights, and allow them time to respond【683399733618100†L235-L242】",
+          "If the matter remains unresolved, consider other options such as chargeback or the platform’s dispute process; if appropriate, lodge a complaint with CAV via the general complaint form【683399733618100†L338-L367】",
+          "CAV will contact the business or rental provider, explore options consistent with the law and attempt to achieve a voluntary resolution; if unresolved, they may advise you to apply to the Victorian Civil and Administrative Tribunal (VCAT)【683399733618100†L338-L367】"
+        ],
+        "timeframe": "There is no set timeframe for businesses to resolve a problem; allow time for a response and send a reminder if you don’t hear within a week【683399733618100†L235-L242】. CAV does not specify a fixed resolution period and timeframes depend on the complexity of the issue",
+        "requirements": [
+          "You must have made a reasonable attempt to resolve the problem with the business or provider",
+          "Provide details of the complaint and supporting documents such as receipts and correspondence",
+          "The problem must fall within CAV’s jurisdiction and have a reasonable chance of being resolved【683399733618100†L346-L353】",
+          "Matters already decided by a court or tribunal or where a credit card chargeback has not been attempted may not be accepted"
+        ]
+      }
+    },
+    {
+      "id": "oft-qld",
+      "name": "Queensland Office of Fair Trading",
+      "acronym": "OFT",
+      "description": "Government agency that provides information and dispute resolution services for consumers and businesses under Queensland’s fair trading laws.",
+      "website": "https://www.qld.gov.au/fairtrading",
+      "contact": {
+        "phone": "13 QGOV (13 74 68)",
+        "email": "Brisbane.OFT@justice.qld.gov.au",
+        "onlineForm": "https://www.qld.gov.au/law/your-rights/consumer-rights-complaints-and-scams/consumer-complaints/OFT-complaint-process"
+      },
+      "jurisdiction": "Queensland",
+      "industries": ["consumer goods", "services"],
+      "complaintTypes": [
+        "Faulty goods and refund disputes",
+        "Misleading advertising and unfair trading",
+        "Scams and unlicensed operators",
+        "Late or non‑delivery of goods",
+        "Contract or service quality disputes"
+      ],
+      "process": {
+        "steps": [
+          "Try to resolve the issue with the business or service provider first and keep records of your contact",
+          "Lodge a complaint with the Office of Fair Trading online, by phone or in writing, providing detailed information and evidence【728227927095580†L144-L156】",
+          "OFT will assess your complaint, confirm receipt, give you a file reference number and seek your consent to share your details with the business【728227927095580†L144-L160】",
+          "They will contact the business and attempt to conciliate the dispute; if the matter leads to an investigation, they will keep you informed【728227927095580†L162-L169】",
+          "If the issue cannot be resolved, they will advise you on further options such as applying to the Queensland Civil and Administrative Tribunal (QCAT) or seeking legal advice"
+        ],
+        "timeframe": "OFT normally contacts you within 10 working days of receiving your complaint; they aim to resolve most complaints within 30 days, although complex matters may take longer【728227927095580†L156-L174】",
+        "requirements": [
+          "Must have attempted to resolve the complaint with the business first",
+          "Provide detailed information and supporting evidence when lodging the complaint",
+          "You must be a Queensland consumer or have purchased from a business operating in Queensland【728227927095580†L131-L139】",
+          "OFT cannot force a business to compensate you but will assist in conciliation"
+        ]
+      }
+    }
+  ]
+}
