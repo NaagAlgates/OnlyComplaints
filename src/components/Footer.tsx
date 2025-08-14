@@ -90,18 +90,6 @@ export const Footer: React.FC = () => {
           >
             Contribute on GitHub
           </a>
-          <a
-            href="#contact"
-            style={linkStyles}
-            onMouseOver={(e) => {
-              e.currentTarget.style.color = '#f97316';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.color = '#666';
-            }}
-          >
-            Contact Us
-          </a>
         </div>
 
         <p style={copyrightStyles}>

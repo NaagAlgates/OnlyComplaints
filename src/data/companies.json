@@ -239,9 +239,15 @@
         "escalation": {
           "agencyIds": [
             "ewon-nsw",
-            "esc-vic"
+            "ewoq-qld",
+            "ewov-vic",
+            "ewowa-wa",
+            "ewosa-sa",
+            "eot-tas",
+            "acat-act",
+            "ombudsman-nt"
           ],
-          "timeline": "Contact Energy & Water Ombudsman in your state if unresolved"
+          "timeline": "If unresolved you can contact the energy and water ombudsman in your state or territory (NSW, QLD, VIC, WA, SA, TAS, ACT or NT)"
         }
       },
       "commonIssues": [
@@ -385,9 +391,9 @@
         },
         "escalation": {
           "agencyIds": [
-            "airline-advocate"
+            "accc"
           ],
-          "timeline": "Contact the Airline Customer Advocate if unresolved"
+          "timeline": "If unresolved you can lodge a complaint with the ACCC for aviation consumer issues"
         }
       },
       "commonIssues": [
@@ -433,9 +439,9 @@
         },
         "escalation": {
           "agencyIds": [
-            "airline-advocate"
+            "accc"
           ],
-          "timeline": "Contact the Airline Customer Advocate if unresolved"
+          "timeline": "If unresolved you can contact the ACCC for aviation consumer issues"
         }
       },
       "commonIssues": [
@@ -481,9 +487,9 @@
         },
         "escalation": {
           "agencyIds": [
-            "airline-advocate"
+            "accc"
           ],
-          "timeline": "Contact the Airline Customer Advocate if unresolved after internal process"
+          "timeline": "If unresolved after Virgin Australia’s internal process you can lodge a complaint with the ACCC for aviation consumer issues"
         }
       },
       "commonIssues": [
@@ -530,9 +536,15 @@
         "escalation": {
           "agencyIds": [
             "ewon-nsw",
-            "esc-vic"
+            "ewoq-qld",
+            "ewov-vic",
+            "ewowa-wa",
+            "ewosa-sa",
+            "eot-tas",
+            "acat-act",
+            "ombudsman-nt"
           ],
-          "timeline": "Contact the Energy & Water Ombudsman in your state if unresolved"
+          "timeline": "If unresolved you can contact the energy and water ombudsman in your state or territory (NSW, QLD, VIC, WA, SA, TAS, ACT or NT)"
         }
       },
       "commonIssues": [
@@ -773,9 +785,9 @@
         },
         "escalation": {
           "agencyIds": [
-            "oaic"
+            "accc"
           ],
-          "timeline": "If your concern is not resolved you may contact the Office of the Australian Information Commissioner (OAIC) via enquiries@oaic.gov.au or 1300 363 992"
+          "timeline": "If your complaint about a product or service cannot be resolved with IKEA you can contact the ACCC for advice or lodge a complaint with your state consumer affairs agency"
         }
       },
       "commonIssues": [
@@ -868,9 +880,9 @@
         },
         "escalation": {
           "agencyIds": [
-            "phio"
+            "afca"
           ],
-          "timeline": "If your complaint is not resolved to your satisfaction you can contact the Private Health Insurance Ombudsman via the Commonwealth Ombudsman"
+          "timeline": "If your complaint is not resolved to your satisfaction you can contact the Australian Financial Complaints Authority (AFCA) for an external review"
         }
       },
       "commonIssues": [
@@ -963,9 +975,9 @@
         },
         "escalation": {
           "agencyIds": [
-            "commonwealth-ombudsman"
+            "accc"
           ],
-          "timeline": "If your postal complaint cannot be resolved you may contact the Postal Industry Ombudsman (part of the Commonwealth Ombudsman)"
+          "timeline": "If your postal complaint cannot be resolved you may contact the ACCC or your state consumer affairs agency"
         }
       },
       "commonIssues": [
@@ -1061,11 +1073,16 @@
         },
         "escalation": {
           "agencyIds": [
-            "ewov-vic",
             "ewon-nsw",
-            "eios-sa"
+            "ewoq-qld",
+            "ewov-vic",
+            "ewowa-wa",
+            "ewosa-sa",
+            "eot-tas",
+            "acat-act",
+            "ombudsman-nt"
           ],
-          "timeline": "If you are still dissatisfied you can contact your state Energy & Water Ombudsman for an external review (e.g., EWOV in Victoria, EWON in NSW, or EIOS in South Australia)"
+          "timeline": "If you are still dissatisfied you can contact the energy and water ombudsman in your state or territory (NSW, QLD, VIC, WA, SA, TAS, ACT or NT) for an external review"
         }
       },
       "commonIssues": [

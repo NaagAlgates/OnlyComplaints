@@ -3,6 +3,7 @@ import React, {
   useState,
 } from 'react';
 
+import { About } from './components/About';
 import { CompanyCard } from './components/CompanyCard';
 import { CompanyDetail } from './components/CompanyDetail';
 import { Footer } from './components/Footer';
@@ -33,6 +34,7 @@ function App() {
   const [hasSearched, setHasSearched] = useState(false);
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [showTermsOfUse, setShowTermsOfUse] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   // Handle browser navigation (back/forward buttons)
   useEffect(() => {
@@ -43,11 +45,19 @@ function App() {
       if (hash === '#privacy') {
         setShowPrivacyPolicy(true);
         setShowTermsOfUse(false);
+        setShowAbout(false);
         setSelectedCompany(null);
         setSearchResults([]);
       } else if (hash === '#terms') {
         setShowTermsOfUse(true);
         setShowPrivacyPolicy(false);
+        setShowAbout(false);
+        setSelectedCompany(null);
+        setSearchResults([]);
+      } else if (hash === '#about') {
+        setShowAbout(true);
+        setShowPrivacyPolicy(false);
+        setShowTermsOfUse(false);
         setSelectedCompany(null);
         setSearchResults([]);
       } else if (hash.startsWith('#company/')) {
@@ -57,11 +67,13 @@ function App() {
           setSelectedCompany(company);
           setShowPrivacyPolicy(false);
           setShowTermsOfUse(false);
+          setShowAbout(false);
         }
       } else {
         // No hash or unknown hash - go to home
         setShowPrivacyPolicy(false);
         setShowTermsOfUse(false);
+        setShowAbout(false);
         setSelectedCompany(null);
         // Don't clear search results on back to home
       }
@@ -178,7 +190,7 @@ function App() {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    paddingTop: searchResults.length > 0 || selectedCompany || showPrivacyPolicy || showTermsOfUse ? '2rem' : '20vh',
+    paddingTop: searchResults.length > 0 || selectedCompany || showPrivacyPolicy || showTermsOfUse || showAbout ? '2rem' : '20vh',
     transition: 'padding-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   };
 
@@ -203,6 +215,8 @@ function App() {
           <PrivacyPolicy />
         ) : showTermsOfUse ? (
           <TermsOfUse />
+        ) : showAbout ? (
+          <About />
         ) : !selectedCompany ? (
           <>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
