@@ -210,7 +210,7 @@ function App() {
         showPrivacyLink={!showPrivacyPolicy}
       />
       
-      <main style={mainStyles}>
+      <main style={mainStyles} role="main" aria-label="Main content">
         {showPrivacyPolicy ? (
           <PrivacyPolicy />
         ) : showTermsOfUse ? (
@@ -219,16 +219,35 @@ function App() {
           <About />
         ) : !selectedCompany ? (
           <>
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <section style={{ textAlign: 'center', marginBottom: '2rem' }} aria-label="Search companies">
+              <h1 style={{ 
+                fontSize: '2.5rem', 
+                fontWeight: 'bold', 
+                marginBottom: '1rem',
+                color: '#1f2937',
+                textAlign: 'center'
+              }}>
+                Find Official Complaint Channels
+              </h1>
+              <p style={{ 
+                fontSize: '1.1rem', 
+                color: '#6b7280', 
+                marginBottom: '2rem',
+                maxWidth: '600px',
+                margin: '0 auto 2rem'
+              }}>
+                Search for Australia's top companies to find their official complaint channels and escalation paths
+              </p>
               <SearchBar 
                 value={searchQuery}
                 onSearch={handleSearch} 
                 onClear={handleClearSearch}
               />
-            </div>
+            </section>
 
             {searchResults.length > 0 && (
-              <div style={resultsStyles}>
+              <section style={resultsStyles} aria-label="Search results">
+                <h2 className="sr-only">Company Results</h2>
                 {searchResults.map(company => (
                   <CompanyCard
                     key={company.id}
@@ -236,11 +255,11 @@ function App() {
                     onSelect={handleCompanySelect}
                   />
                 ))}
-              </div>
+              </section>
             )}
 
             {searchQuery && searchResults.length === 0 && (
-              <div style={{ 
+              <section style={{ 
                 textAlign: 'center', 
                 padding: '2rem', 
                 color: '#666',
@@ -249,9 +268,9 @@ function App() {
                 marginTop: '1rem',
                 opacity: 1,
                 transition: 'opacity 0.3s ease-out',
-              }}>
+              }} aria-label="No results found">
                 <p>No companies found for "{searchQuery}". Try a different search term or company name.</p>
-              </div>
+              </section>
             )}
           </>
         ) : (
